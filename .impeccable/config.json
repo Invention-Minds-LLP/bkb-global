@@ -1,0 +1,72 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/app/pages/home/visit-form.css"
+        ],
+        "createdAt": "2026-10-31T12:35:04.491Z",
+        "reason": "Claude: false positive, fields use border-radius 0; the 3px bottom rule is the underlined field's focus state"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-31T13:08:40.293Z",
+        "reason": "Claude: throwaway decision-round sketch, not shipped"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-31T13:08:40.348Z",
+        "reason": "Claude: canon card sketch deliberately shows the category default; not shipped"
+      },
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-31T13:08:40.407Z",
+        "reason": "Claude: throwaway decision-round sketch, not shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-01T06:28:47.057Z",
+        "reason": "Claude: rejected decision-round sketch from the superseded direction; not shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-11-01T06:28:47.128Z",
+        "reason": "Claude: rejected decision-round sketch from the superseded direction; not shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-11-01T06:28:47.179Z",
+        "reason": "Claude: rejected decision-round sketch from the superseded direction; not shipped"
+      }
+    ]
+  }
+}

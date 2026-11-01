@@ -1,0 +1,67 @@
+@if (status() === 'sent') {
+  <div class="done" role="status">
+    <svg class="done-mark" aria-hidden="true" viewBox="0 0 48 48" width="48" height="48">
+      <circle cx="24" cy="24" r="22" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5"/>
+      <path d="M14 25l7 7 13-15" fill="none" stroke="#4a0e22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div>
+      <p class="done-lead">Thank you{{ firstName() ? ', ' + firstName() : '' }}. This is a preview.</p>
+      <p>Online booking isn't connected yet, so your details were not sent. Please call admissions on
+        <span class="placeholder">[phone number]</span> to book your visit.</p>
+      <button type="button" class="link" (click)="reset()">Start again</button>
+    </div>
+  </div>
+} @else {
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate [attr.aria-label]="'Book a school visit'">
+    <div class="field stage" [class.has-error]="invalid('stage')">
+      <label [for]="idPrefix() + '-stage'">Your child will join</label>
+      <select [id]="idPrefix() + '-stage'" formControlName="stage"
+        [attr.aria-invalid]="invalid('stage')"
+        [attr.aria-describedby]="invalid('stage') ? idPrefix() + '-stage-error' : null">
+        <option value="" disabled>Select stage</option>
+        @for (s of stages(); track s.id) {
+          <option [value]="s.id">{{ s.name }} · {{ s.classes }}</option>
+        }
+      </select>
+      @if (invalid('stage')) {
+        <p class="error" [id]="idPrefix() + '-stage-error'">Choose the stage your child would join.</p>
+      }
+    </div>
+
+    @if (layout() === 'full') {
+      <fieldset class="field time">
+        <legend>Best time to visit</legend>
+        <div class="choices">
+          <label><input type="radio" formControlName="time" value="morning" /><span>Morning</span></label>
+          <label><input type="radio" formControlName="time" value="afternoon" /><span>Afternoon</span></label>
+          <label><input type="radio" formControlName="time" value="any" /><span>Either</span></label>
+        </div>
+      </fieldset>
+    }
+
+    <div class="field" [class.has-error]="invalid('name')">
+      <label [for]="idPrefix() + '-name'">Parent's name</label>
+      <input [id]="idPrefix() + '-name'" type="text" formControlName="name" autocomplete="name" placeholder="Your full name"
+        [attr.aria-invalid]="invalid('name')"
+        [attr.aria-describedby]="invalid('name') ? idPrefix() + '-name-error' : null" />
+      @if (invalid('name')) {
+        <p class="error" [id]="idPrefix() + '-name-error'">Please enter your name.</p>
+      }
+    </div>
+
+    <div class="field" [class.has-error]="invalid('contact')">
+      <label [for]="idPrefix() + '-contact'">Mobile or email</label>
+      <input [id]="idPrefix() + '-contact'" type="text" formControlName="contact" autocomplete="tel" placeholder="Mobile or email"
+        [attr.aria-invalid]="invalid('contact')"
+        [attr.aria-describedby]="invalid('contact') ? idPrefix() + '-contact-error' : null" />
+      @if (invalid('contact')) {
+        <p class="error" [id]="idPrefix() + '-contact-error'">Enter a mobile number or email we can reach.</p>
+      }
+    </div>
+
+    <button class="submit" type="submit" [disabled]="status() === 'sending'">
+      @if (status() === 'sending') { Sending… } @else { Book a visit }
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </form>
+}

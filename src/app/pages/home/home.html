@@ -1,0 +1,289 @@
+<a class="skip" href="#visit">Skip to booking a visit</a>
+
+<header class="masthead">
+  <a class="wordmark" href="/" aria-label="BKB Global, home">
+    <svg class="mark" aria-hidden="true" viewBox="0 0 40 40" width="38" height="38">
+      <circle cx="20" cy="20" r="19" fill="#7b1e3a"/>
+      <path d="M9 14c4-2 8-2 11 1 3-3 7-3 11-1v14c-4-2-8-2-11 1-3-3-7-3-11-1z" fill="#fff"/>
+      <path d="M20 15v14" stroke="#7b1e3a" stroke-width="1.6"/>
+      <circle cx="30" cy="9" r="3.2" fill="#f2a93b"/>
+    </svg>
+    <span>BKB <b>Global</b></span>
+  </a>
+
+  <button class="menu-toggle" type="button" (click)="toggleMenu()"
+    [attr.aria-expanded]="menuOpen()" aria-controls="site-nav">
+    <span class="visually-hidden">Menu</span>
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+      @if (menuOpen()) {
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      } @else {
+        <path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      }
+    </svg>
+  </button>
+
+  <nav id="site-nav" class="nav" [class.open]="menuOpen()" aria-label="Main">
+    <ul>
+      <li><a href="#journey" (click)="closeMenu()">Learning</a></li>
+      <li><a href="#teaching" (click)="closeMenu()">How we teach</a></li>
+      <li><a href="#life" (click)="closeMenu()">School life</a></li>
+      <li><a href="#admissions" (click)="closeMenu()">Admissions</a></li>
+      <li class="parents-link"><a href="#families" (click)="closeMenu()">Parents</a></li>
+    </ul>
+    <a class="nav-cta" href="#visit" (click)="closeMenu()">Book a visit</a>
+  </nav>
+</header>
+
+<main>
+  <!-- First viewport -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">Curious minds.<br /><span class="hl">Serious learning.
+        <svg class="fig hero-scribble" appDraw aria-hidden="true" viewBox="0 0 400 30" preserveAspectRatio="none">
+          <path class="d" d="M6 20 C 80 8, 150 26, 230 14 S 360 10, 394 18" pathLength="1"/>
+        </svg>
+        <svg class="pencil" aria-hidden="true" viewBox="0 0 64 64" width="64" height="64">
+          <g transform="rotate(35 32 32)">
+            <rect x="24" y="2" width="16" height="44" rx="3" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5"/>
+            <rect x="24" y="2" width="16" height="9" rx="3" fill="#e7b4c3" stroke="#4a0e22" stroke-width="2.5"/>
+            <path d="M24 46 L32 62 L40 46 Z" fill="#fff" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M29.5 57 L32 62 L34.5 57 Z" fill="#4a0e22"/>
+          </g>
+        </svg></span></h1>
+      <p class="lede">
+        At BKB Global, children are taught to think clearly, work hard and enjoy it.
+        <span class="placeholder">[School to add: city, board and classes.]</span>
+      </p>
+      <app-visit-form id="visit-top" layout="bar" idPrefix="hero" [stages]="stages" />
+    </div>
+
+    <div class="hero-art">
+      <img class="hero-photo" src="images/stock/girls-studying.jpg" width="1400" height="934"
+        alt="Two schoolgirls in uniform concentrating as they write in their exercise books" fetchpriority="high" />
+
+      <svg class="plane-path" aria-hidden="true" viewBox="0 0 400 260">
+        <path d="M20 230 C 80 120, 160 260, 220 150 S 360 40, 380 30" fill="none" stroke="#7b1e3a"
+          stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/>
+      </svg>
+      <svg class="plane" aria-hidden="true" viewBox="0 0 60 44" width="60" height="44">
+        <path d="M2 22 L58 2 L40 42 L28 28 Z" fill="#fff" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M58 2 L28 28 L24 40" fill="none" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+
+      <svg class="atom" aria-hidden="true" viewBox="0 0 120 120" width="120" height="120">
+        <circle cx="60" cy="60" r="56" fill="#f8e9ee" stroke="#4a0e22" stroke-width="2.5"/>
+        <g class="orbits" fill="none" stroke="#7b1e3a" stroke-width="2.5">
+          <ellipse cx="60" cy="60" rx="38" ry="14"/>
+          <ellipse cx="60" cy="60" rx="38" ry="14" transform="rotate(60 60 60)"/>
+          <ellipse cx="60" cy="60" rx="38" ry="14" transform="rotate(120 60 60)"/>
+        </g>
+        <circle cx="60" cy="60" r="8" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5"/>
+        <g class="electron"><circle cx="98" cy="60" r="5" fill="#7b1e3a"/></g>
+      </svg>
+
+      <svg class="books" aria-hidden="true" viewBox="0 0 150 110" width="150" height="110">
+        <rect x="10" y="74" width="130" height="26" rx="5" fill="#7b1e3a" stroke="#4a0e22" stroke-width="2.5"/>
+        <rect x="20" y="48" width="112" height="26" rx="5" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5"/>
+        <rect x="6" y="22" width="120" height="26" rx="5" fill="#e7b4c3" stroke="#4a0e22" stroke-width="2.5"/>
+        <path d="M24 30h70M34 56h60M24 82h90" stroke="#4a0e22" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+        <g class="apple">
+          <path d="M98 22c-10-14 14-20 16-6 2-14 26-8 16 6-6 10-14 8-16 6-2 2-10 4-16-6z" fill="#b3122e" stroke="#4a0e22" stroke-width="2.5"/>
+          <path d="M114 10c0-4 3-8 7-9" fill="none" stroke="#4a0e22" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+      </svg>
+
+      <svg class="flower" aria-hidden="true" viewBox="0 0 100 100" width="96" height="96">
+        <g class="petals" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5">
+          <ellipse cx="50" cy="22" rx="12" ry="18"/>
+          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(45 50 50)"/>
+          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(90 50 50)"/>
+          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(135 50 50)"/>
+          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(180 50 50)"/>
+          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(225 50 50)"/>
+          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(270 50 50)"/>
+          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(315 50 50)"/>
+        </g>
+        <circle cx="50" cy="50" r="13" fill="#7b1e3a" stroke="#4a0e22" stroke-width="2.5"/>
+      </svg>
+
+      <p class="photo-note">Stock photo, to be replaced with BKB Global students</p>
+    </div>
+  </section>
+
+  <!-- Statement with inline photos -->
+  <section class="statement" aria-label="Our approach">
+    <p>
+      Every day, our students
+      <span class="pill"><img src="images/stock/students-group.jpg" alt="" width="1400" height="934" loading="lazy" /></span>
+      read, question, write and
+      <span class="pill"><img src="images/stock/boys-reading.jpg" alt="" width="1400" height="934" loading="lazy" /></span>
+      practise until ideas <span class="scribble">stick for good.
+        <svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none" appDraw class="fig">
+          <path class="d" d="M4 16 C 60 6, 120 22, 180 10 S 270 8, 296 14" pathLength="1"/>
+        </svg></span>
+    </p>
+  </section>
+
+  <!-- Signature: the journey -->
+  <section id="journey" class="journey" #journey aria-labelledby="journey-title">
+    <div class="section-head">
+      <h2 id="journey-title">One school, from Nursery to Class 12.</h2>
+      <p>Each stage builds on the last, so nothing important is missed along the way.
+        <span class="placeholder">[Stages, classes and descriptions to be confirmed.]</span></p>
+    </div>
+
+    <div class="route">
+      <svg class="route-line" aria-hidden="true" [attr.viewBox]="routeBox()">
+        <path class="route-dots" [attr.d]="routePath()"/>
+        <path class="route-ink" [attr.d]="routePath()" pathLength="1"/>
+      </svg>
+
+      <ol class="stages">
+        @for (s of stages; track s.id; let i = $index) {
+          <li class="stage" data-stage [class.awake]="i <= reached()" [class.flip]="i % 2 === 1">
+            <div class="stage-art" aria-hidden="true">
+              @switch (s.art) {
+                @case ('blocks') {
+                  <svg viewBox="0 0 160 140">
+                    <rect class="b1" x="20" y="84" width="52" height="48" rx="6" fill="#7b1e3a" stroke="#4a0e22" stroke-width="2.5"/>
+                    <rect class="b2" x="78" y="84" width="52" height="48" rx="6" fill="#e7b4c3" stroke="#4a0e22" stroke-width="2.5"/>
+                    <rect class="b3" x="48" y="30" width="52" height="48" rx="6" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5"/>
+                    <circle cx="46" cy="108" r="8" fill="#fff"/><path d="M96 98l8 20 8-20" fill="none" stroke="#4a0e22" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M64 54h20M74 44v20" stroke="#4a0e22" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                }
+                @case ('book') {
+                  <svg viewBox="0 0 160 140">
+                    <path d="M14 40c22-10 44-10 66 4 22-14 44-14 66-4v80c-22-10-44-10-66 4-22-14-44-14-66-4z" fill="#fff" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+                    <path d="M80 44v80" stroke="#4a0e22" stroke-width="2.5"/>
+                    <path d="M28 60h38M28 74h38M28 88h30M94 60h38M94 74h38M94 88h30" stroke="#e7b4c3" stroke-width="4" stroke-linecap="round"/>
+                    <path class="page" d="M80 44c18-12 36-14 54-8v80c-18-6-36-4-54 8z" fill="#f8e9ee" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+                    <circle cx="140" cy="24" r="10" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5"/>
+                  </svg>
+                }
+                @case ('flask') {
+                  <svg viewBox="0 0 160 140">
+                    <path d="M62 14h36M68 14v40l-36 62c-4 8 2 16 10 16h76c8 0 14-8 10-16L92 54V14" fill="#fff" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+                    <path d="M46 92h68l14 24c3 6-1 12-8 12H40c-7 0-11-6-8-12z" fill="#7b1e3a"/>
+                    <circle class="bub bub1" cx="66" cy="104" r="6" fill="#e7b4c3"/>
+                    <circle class="bub bub2" cx="86" cy="110" r="4" fill="#f2a93b"/>
+                    <circle class="bub bub3" cx="100" cy="100" r="5" fill="#fff"/>
+                  </svg>
+                }
+                @case ('compass') {
+                  <svg viewBox="0 0 160 140">
+                    <path class="arc" d="M30 124 A 56 56 0 0 1 130 124" fill="none" stroke="#f2a93b" stroke-width="4" stroke-linecap="round" pathLength="1"/>
+                    <g class="legs">
+                      <circle cx="80" cy="22" r="9" fill="#7b1e3a" stroke="#4a0e22" stroke-width="2.5"/>
+                      <path d="M80 30 L52 124" stroke="#4a0e22" stroke-width="5" stroke-linecap="round"/>
+                      <path d="M80 30 L108 124" stroke="#7b1e3a" stroke-width="5" stroke-linecap="round"/>
+                      <path d="M62 90h36" stroke="#4a0e22" stroke-width="2.5"/>
+                    </g>
+                  </svg>
+                }
+                @case ('cap') {
+                  <svg viewBox="0 0 160 140">
+                    <path d="M44 66v28c0 12 72 12 72 0V66" fill="#7b1e3a" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+                    <path d="M80 30 L150 58 L80 86 L10 58 Z" fill="#4a0e22" stroke="#4a0e22" stroke-width="2.5" stroke-linejoin="round"/>
+                    <g class="tassel"><path d="M80 58 L128 70 V104" fill="none" stroke="#f2a93b" stroke-width="3.5" stroke-linecap="round"/>
+                      <rect x="122" y="100" width="12" height="18" rx="4" fill="#f2a93b" stroke="#4a0e22" stroke-width="2"/></g>
+                    <path class="spark" d="M30 22l4 8 8 4-8 4-4 8-4-8-8-4 8-4z" fill="#f2a93b"/>
+                  </svg>
+                }
+              }
+            </div>
+            <div class="stage-text">
+              <h3>{{ s.name }}</h3>
+              <p class="stage-meta">{{ s.classes }} · {{ s.ages }}</p>
+              <p>{{ s.summary }}</p>
+            </div>
+          </li>
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- How we teach -->
+  <section id="teaching" class="teaching" aria-labelledby="teaching-title">
+    <figure class="teaching-photo">
+      <img src="images/stock/classroom-teacher.jpg" width="1400" height="934" loading="lazy"
+        alt="A teacher in a sari walking between rows of students writing at their desks" />
+      <figcaption class="photo-note">Stock photo, to be replaced</figcaption>
+    </figure>
+    <div class="teaching-copy">
+      <h2 id="teaching-title">Strong results start in ordinary lessons.</h2>
+      <ol class="principles">
+        @for (p of principles; track p.title) {
+          <li>
+            <svg class="tick fig" appDraw aria-hidden="true" viewBox="0 0 40 40" width="40" height="40">
+              <circle class="fill" cx="20" cy="20" r="18"/>
+              <path class="d" d="M11 21l6 6 12-14" pathLength="1"/>
+            </svg>
+            <div><h3>{{ p.title }}</h3><p>{{ p.text }}</p></div>
+          </li>
+        }
+      </ol>
+      <p class="results-note"><span class="placeholder">[Teaching approach to be confirmed by the school. Board results and achievements to be added.]</span></p>
+    </div>
+  </section>
+
+  <!-- School life -->
+  <section id="life" class="life" aria-labelledby="life-title">
+    <div class="life-frame">
+      <img src="images/stock/yoga-ground.jpg" width="1400" height="934" loading="lazy"
+        alt="Students in uniform doing yoga together on the school ground" />
+      <div class="life-card">
+        <h2 id="life-title">Learning doesn’t stop at the classroom door.</h2>
+        <ul class="tags">
+          @for (item of life; track item) { <li>{{ item }}</li> }
+        </ul>
+        <p class="photo-note on-card"><span class="placeholder">[Activities to be confirmed.]</span> Stock photo, to be replaced.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section id="admissions" class="visit" aria-labelledby="visit-title">
+    <div class="visit-copy">
+      <h2 id="visit-title">Come and see a normal school day.</h2>
+      <ol class="steps">
+        @for (step of visitSteps; track step.title; let i = $index) {
+          <li><span class="step-n">{{ i + 1 }}</span><div><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div></li>
+        }
+      </ol>
+      <p class="call">Prefer to talk? Call admissions on <span class="placeholder">[phone number]</span>.</p>
+      <p class="results-note"><span class="placeholder">[Visit and admission steps to be confirmed.]</span></p>
+    </div>
+    <div id="visit" class="visit-panel">
+      <h3 class="panel-title">Book a visit</h3>
+      <app-visit-form idPrefix="visit" [stages]="stages" />
+    </div>
+  </section>
+
+  <!-- Current families -->
+  <section id="families" class="families" aria-labelledby="families-title">
+    <h2 id="families-title">For BKB Global parents</h2>
+    <ul>
+      @for (link of parentLinks; track link.label) {
+        <li><a [href]="link.href">{{ link.label }}
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+      }
+    </ul>
+  </section>
+</main>
+
+<footer id="contact" class="footer">
+  <div class="footer-top">
+    <p class="footer-mark">BKB <b>Global</b></p>
+    <a class="footer-cta" href="#visit">Book a visit</a>
+  </div>
+  <dl class="facts">
+    <div><dt>Address</dt><dd><span class="placeholder">[Street, area, city, PIN code]</span></dd></div>
+    <div><dt>Admissions</dt><dd><span class="placeholder">[phone]</span><br /><span class="placeholder">[email]</span></dd></div>
+    <div><dt>School office</dt><dd><span class="placeholder">[phone]</span><br /><span class="placeholder">[office hours]</span></dd></div>
+    <div><dt>Affiliation</dt><dd><span class="placeholder">[Board and affiliation number]</span></dd></div>
+  </dl>
+  <p class="imprint">© {{ year }} BKB Global. Photos are stock placeholders from Unsplash.</p>
+</footer>

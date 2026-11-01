@@ -1,0 +1,271 @@
+:host {
+  display: block;
+}
+
+form {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Compact form for the first viewport: stage across the top, then name, contact and the action */
+:host(.bar) form {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  grid-template-areas:
+    'stage stage stage'
+    'name contact submit';
+  align-items: end;
+  gap: 14px 12px;
+  background: var(--white);
+  border: 2px solid var(--wine);
+  border-radius: 22px;
+  padding: 18px;
+}
+:host(.bar) .field.stage {
+  grid-area: stage;
+}
+:host(.bar) .submit {
+  grid-area: submit;
+  align-self: start;
+  margin-top: 24px;
+  min-height: 48px;
+}
+:host(.bar) input[type='text'],
+:host(.bar) select {
+  background-color: var(--blush);
+  border-color: var(--blush);
+}
+:host(.bar) select {
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+:host(.bar) .has-error input,
+:host(.bar) .has-error select {
+  background-color: #fff;
+  border-color: #b3122e;
+}
+:host(.bar) .error {
+  font-size: 13px;
+}
+
+input::placeholder {
+  color: var(--ink-soft);
+  opacity: 1;
+}
+
+.preview-note {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  min-width: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label,
+legend {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--burgundy);
+  padding: 0;
+}
+
+input[type='text'],
+select {
+  width: 100%;
+  font: inherit;
+  font-size: 17px;
+  color: var(--ink);
+  background: var(--white);
+  border: 2px solid var(--rose);
+  border-radius: 12px;
+  padding: 10px 14px;
+  min-height: 48px;
+  caret-color: var(--burgundy);
+  appearance: none;
+  transition: border-color 160ms var(--ease-out), background-color 160ms var(--ease-out);
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237b1e3a' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+:host(.bar) select {
+  background-position: right 0 center;
+  padding-right: 24px;
+}
+
+input[type='text']:hover,
+select:hover {
+  border-color: var(--burgundy);
+}
+
+input[type='text']:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--marigold);
+  outline-offset: 2px;
+}
+
+.has-error input,
+.has-error select {
+  border-color: #b3122e;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b3122e;
+  line-height: 1.35;
+}
+
+.choices {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.choices label {
+  position: relative;
+  cursor: pointer;
+}
+.choices input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.choices span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 2px solid var(--rose);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out), color 160ms var(--ease-out);
+}
+.choices label:hover span {
+  border-color: var(--burgundy);
+}
+.choices input:checked + span {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+  color: var(--on-burgundy);
+}
+.choices input:focus-visible + span {
+  outline: 3px solid var(--marigold);
+  outline-offset: 2px;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 28px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--on-burgundy);
+  background: var(--burgundy);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 180ms var(--ease-out), transform 180ms var(--ease-spring);
+}
+.submit svg {
+  transition: transform 220ms var(--ease-spring);
+}
+.submit:hover {
+  background: var(--wine);
+}
+.submit:hover svg {
+  transform: translateX(4px);
+}
+.submit:active {
+  transform: scale(0.98);
+}
+.submit:disabled {
+  cursor: progress;
+  background: var(--ink-soft);
+}
+
+.done {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  padding: var(--space-2);
+  background: var(--white);
+  border: 2px solid var(--wine);
+  border-radius: 20px;
+}
+.done-mark {
+  flex: none;
+  animation: pop 500ms var(--ease-spring);
+}
+.done-lead {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--wine);
+}
+.link {
+  margin-top: 6px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--burgundy);
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+  cursor: pointer;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.4) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1240px) {
+  :host(.bar) form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      'stage stage'
+      'name contact'
+      'submit submit';
+  }
+  :host(.bar) .submit {
+    margin-top: 4px;
+    min-height: 54px;
+  }
+}
+
+@media (max-width: 480px) {
+  :host(.bar) form {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    padding: 14px;
+  }
+  :host(.bar) .field.stage,
+  :host(.bar) .submit {
+    grid-area: auto;
+  }
+}
