@@ -7,6 +7,7 @@
   <section class="hero" aria-labelledby="hero-title">
     <img class="hero-bg" src="images/bkg/science-lab.jpg" width="1536" height="1025" alt="" fetchpriority="high" />
     <div class="hero-shade" aria-hidden="true"></div>
+    <app-particles [density]="1.5" [opacity]="0.75" />
     <div class="wrap hero-inner">
       <div class="hero-copy">
         <h1 id="hero-title">Where the <em>learning</em> begins</h1>
@@ -40,9 +41,10 @@
   </div>
 
   <!-- Welcome -->
-  <section class="welcome" id="about" aria-labelledby="welcome-title">
+  <section class="welcome has-particles" id="about" aria-labelledby="welcome-title">
+    <app-particles rgb="19, 40, 94" [density]="1" [opacity]="0.3" />
     <div class="wrap welcome-grid">
-      <div class="welcome-copy" appReveal>
+      <div class="welcome-copy" appReveal revealFrom="left">
         <h2 class="section-title" id="welcome-title">Welcome to BKG Global School</h2>
         <p class="section-lede">BKG Global School aims to provide a stimulating learning environment with truly
           international standards within the formal CBSE curriculum. We believe school life should be valued for itself,
@@ -52,7 +54,7 @@
           learning, so children are ready for the 21st century.</p>
         <blockquote class="pull">“We believe in reaching the mind through the heart.”</blockquote>
       </div>
-      <div class="welcome-media" appReveal="150">
+      <div class="welcome-media" appReveal="150" revealFrom="right">
         <img class="m1" src="images/bkg/computer-lab.jpg" width="1024" height="683" loading="lazy"
           alt="BKG students with headsets working at computers in the computer lab" />
         <img class="m2" src="images/bkg/art-painting.jpg" width="1024" height="684" loading="lazy"
@@ -62,10 +64,11 @@
   </section>
 
   <!-- Figures -->
-  <section class="figures" aria-label="BKG at a glance">
+  <section class="figures has-particles" aria-label="BKG at a glance">
+    <app-particles [density]="1.8" [opacity]="0.6" [scale]="0.9" />
     <ul class="wrap figures-row">
       @for (f of figures; track f.label; let i = $index) {
-        <li appReveal="{{ i * 100 }}">
+        <li appReveal="{{ i * 120 }}" revealFrom="zoom">
           <p class="figure-value"><span [appCountUp]="f.value">{{ f.value }}</span>{{ f.suffix }}<small>{{ f.unit }}</small></p>
           <p class="figure-label">{{ f.label }}</p>
         </li>
@@ -76,11 +79,11 @@
   <!-- Chairman -->
   <section class="chairman" aria-labelledby="chairman-title">
     <div class="wrap chairman-grid">
-      <figure class="chairman-photo" appReveal>
+      <figure class="chairman-photo" appReveal revealFrom="left">
         <img src="images/bkg/chairman.jpg" width="540" height="720" loading="lazy"
           alt="Sri B. Rudra Gouda, Chairman and Managing Trustee of BKG Global School" />
       </figure>
-      <div class="chairman-words" appReveal="150">
+      <div class="chairman-words" appReveal="150" revealFrom="right">
         <h2 class="section-title" id="chairman-title">From the Chairman’s desk</h2>
         <blockquote>
           <p class="quote">“Intelligence is not enough. Intelligence with character and action is the goal of true
@@ -106,14 +109,15 @@
   </section>
 
   <!-- Academics -->
-  <section class="academics" id="academics" aria-labelledby="academics-title">
+  <section class="academics has-particles" id="academics" aria-labelledby="academics-title">
+    <app-particles rgb="156, 122, 44" [density]="1" [opacity]="0.45" />
     <div class="wrap">
-      <h2 class="section-title center" id="academics-title">Academics, from Pre-KG to Class X</h2>
-      <p class="section-lede center">A creative, innovative and insightful CBSE curriculum framework that prepares
+      <h2 class="section-title center" id="academics-title" appReveal revealFrom="down">Academics, from Pre-KG to Class X</h2>
+      <p class="section-lede center" appReveal="120">A creative, innovative and insightful CBSE curriculum framework that prepares
         children for the 21st century, stage by stage.</p>
       <ol class="stages">
         @for (s of stages; track s.id; let i = $index) {
-          <li class="stage" appReveal="{{ i * 100 }}">
+          <li class="stage" appReveal="{{ i * 140 }}" revealFrom="flip">
             <span class="numeral" aria-hidden="true">{{ s.numeral }}</span>
             <h3>{{ s.name }}</h3>
             <p class="classes">{{ s.classes }}</p>
@@ -125,13 +129,14 @@
   </section>
 
   <!-- SMILE -->
-  <section class="smile" aria-labelledby="smile-title">
+  <section class="smile has-particles" aria-labelledby="smile-title">
+    <app-particles [density]="1.3" [opacity]="0.65" />
     <div class="wrap">
-      <h2 class="section-title center light" id="smile-title">The BKG-SMILE way of education</h2>
-      <p class="section-lede center light">Five fundamental principles shape how every child learns at BKG.</p>
+      <h2 class="section-title center light" id="smile-title" appReveal revealFrom="zoom">The BKG-SMILE way of education</h2>
+      <p class="section-lede center light" appReveal="120">Five fundamental principles shape how every child learns at BKG.</p>
       <ul class="smile-grid">
         @for (p of smile; track p.letter; let i = $index) {
-          <li appReveal="{{ i * 90 }}">
+          <li appReveal="{{ i * 110 }}" [revealFrom]="i % 2 === 0 ? 'up' : 'down'">
             <span class="letter" aria-hidden="true">{{ p.letter }}</span>
             <h3>{{ p.title }}</h3>
             <p>{{ p.text }}</p>

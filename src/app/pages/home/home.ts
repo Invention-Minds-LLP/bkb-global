@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SiteFooter } from '../../layout/site-footer';
 import { SiteHeader } from '../../layout/site-header';
 import { CountUpDirective } from '../../shared/count-up.directive';
+import { Particles } from '../../shared/particles';
 import { RevealDirective } from '../../shared/reveal.directive';
 import { AdmissionsSection } from './sections/admissions-section';
 import { CampusSection } from './sections/campus-section';
@@ -47,7 +48,7 @@ const SMILE = [
 @Component({
   selector: 'app-home',
   imports: [
-    SiteHeader, SiteFooter, VisitForm, RevealDirective, CountUpDirective,
+    SiteHeader, SiteFooter, VisitForm, RevealDirective, CountUpDirective, Particles,
     LifeSection, CampusSection, HappeningsSection, AdmissionsSection, ParentsSection,
   ],
   templateUrl: './home.html',

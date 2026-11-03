@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Particles } from '../../../shared/particles';
 import { RevealDirective } from '../../../shared/reveal.directive';
 
 const OLD_SITE = 'https://bkgglobalschool.com';
@@ -14,29 +15,30 @@ const POSTS = [
 
 @Component({
   selector: 'app-happenings-section',
-  imports: [RevealDirective],
+  imports: [RevealDirective, Particles],
   template: `
-    <section class="happenings" id="happenings" aria-labelledby="happenings-title">
+    <section class="happenings has-particles" id="happenings" aria-labelledby="happenings-title">
+      <app-particles rgb="19, 40, 94" [density]="1" [opacity]="0.3" />
       <div class="wrap">
         <div class="head">
-          <h2 class="section-title" id="happenings-title">Happenings at BKG</h2>
-          <a class="btn btn-outline" [href]="site + '/bkg_happenings/'">View all happenings</a>
+          <h2 class="section-title" id="happenings-title" appReveal revealFrom="left">Happenings at BKG</h2>
+          <a class="btn btn-outline" [href]="site + '/bkg_happenings/'" appReveal="150" revealFrom="right">View all happenings</a>
         </div>
 
         <div class="grid">
-          <article class="panel gold-cap" appReveal>
+          <article class="panel gold-cap" appReveal revealFrom="left">
             <h3>Celebrated this term</h3>
             <ul class="events">
               @for (e of recent; track e) { <li>{{ e }}</li> }
             </ul>
           </article>
-          <article class="panel gold-cap" appReveal="100">
+          <article class="panel gold-cap" appReveal="120" revealFrom="up">
             <h3>Annual milestones</h3>
             <ul class="events">
               @for (e of annual; track e) { <li>{{ e }}</li> }
             </ul>
           </article>
-          <article class="panel blog gold-cap" appReveal="200">
+          <article class="panel blog gold-cap" appReveal="240" revealFrom="right">
             <h3>From the BKG blog</h3>
             <ul class="posts">
               @for (p of posts; track p.title) {

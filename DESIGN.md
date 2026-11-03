@@ -1,462 +1,448 @@
 ---
 name: BKG Global School
-description: The school's own navy, royal blue, crest gold and tie red, illustrated and lively; hand-drawn lines carry parents through a serious school.
+description: A professional, photo-led school site in navy and crest gold, with serif headings and quiet motion.
 colors:
-  navy: "#1e3a8a"
-  navy-dark: "#16296b"
-  deep: "#0f1b44"
-  royal: "#3557c4"
-  mist: "#eef2fb"
-  sky: "#c9d6f2"
-  gold: "#e5a823"
-  red: "#c8252c"
+  navy-deep: "#0b1838"
+  navy: "#13285e"
+  navy-soft: "#e8ecf6"
+  gold: "#c9a24c"
+  gold-hover: "#d8b465"
+  gold-deep: "#9c7a2c"
+  gold-soft: "#f4ecd9"
   white: "#ffffff"
-  ink: "#131a33"
-  ink-soft: "#4a5272"
-  on-navy: "#ffffff"
-  on-navy-soft: "#d9e1f5"
-  error-red: "#b3122e"
-  placeholder-cream: "#fff3d6"
+  paper: "#f6f7fb"
+  ink: "#161c2e"
+  ink-soft: "#4b5368"
+  placeholder: "#6b7389"
+  line: "#d9deea"
+  line-hover: "#c3cbe0"
+  line-on-navy-soft: "#c6cee2"
+  input-hover: "#aeb7cc"
+  on-navy-soft: "#c9d2e8"
+  red: "#b4232a"
+  outline-light: "rgb(255 255 255 / 0.7)"
+  hairline-on-navy: "rgb(255 255 255 / 0.15)"
+  hairline-on-navy-faint: "rgb(255 255 255 / 0.12)"
+  hairline-on-navy-strong: "rgb(255 255 255 / 0.18)"
+  gold-focus-ring: "rgb(201 162 76 / 0.35)"
+  gold-border: "rgb(201 162 76 / 0.45)"
+  navy-shadow: "rgb(11 24 56 / 0.08)"
 typography:
   display:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "clamp(46px, min(6vw, 10svh), 96px)"
-    fontWeight: 800
-    lineHeight: 0.98
-    letterSpacing: "-0.035em"
-    fontVariation: "'opsz' 96"
-  statement:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "clamp(34px, 4.6vw, 72px)"
-    fontWeight: 700
-    lineHeight: 1.12
-    letterSpacing: "-0.03em"
-  headline:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "clamp(36px, 4.4vw, 64px)"
-    fontWeight: 800
-    lineHeight: 1.02
-    letterSpacing: "-0.03em"
-  title:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "clamp(30px, 3vw, 44px)"
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: "-0.025em"
-  figure:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "clamp(26px, 2.4vw, 36px)"
-    fontWeight: 800
-    lineHeight: 1
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "clamp(44px, 5.6vw, 80px)"
+    fontWeight: 600
+    lineHeight: 1.04
     letterSpacing: "-0.02em"
-  title-sm:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "24px"
-    fontWeight: 700
-  quote:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "clamp(22px, 2vw, 28px)"
+  headline-feature:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "clamp(36px, 4.4vw, 60px)"
+    fontWeight: 600
+    lineHeight: 1.12
+    letterSpacing: "-0.01em"
+  headline:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "clamp(32px, 3.6vw, 48px)"
+    fontWeight: 600
+    lineHeight: 1.12
+    letterSpacing: "-0.01em"
+  figure:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "clamp(40px, 4.4vw, 60px)"
+    fontWeight: 600
+    lineHeight: 1
+    fontFeature: "tnum"
+  letter:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "64px"
+    fontWeight: 600
+    lineHeight: 1
+  numeral:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "40px"
     fontWeight: 500
-    lineHeight: 1.4
-  button:
-    fontFamily: "Bricolage Grotesque Variable, Bricolage Grotesque, system-ui, sans-serif"
-    fontSize: "18px"
-    fontWeight: 700
+    lineHeight: 1
+  quote:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "clamp(24px, 2.4vw, 34px)"
+    fontWeight: 400
+    lineHeight: 1.3
+  pull:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "clamp(22px, 2vw, 28px)"
+    fontWeight: 400
+    lineHeight: 1.35
+  epigraph:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "clamp(20px, 2vw, 26px)"
+    fontWeight: 400
+  title-lg:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "26px"
+    fontWeight: 600
+    lineHeight: 1.12
+  title:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "24px"
+    fontWeight: 600
+    lineHeight: 1.12
+  title-sm:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "21px"
+    fontWeight: 600
+    lineHeight: 1.12
+  list-serif:
+    fontFamily: "'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif"
+    fontSize: "19px"
+    fontWeight: 400
+  lede-hero:
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
+    fontSize: "clamp(17px, 1.3vw, 20px)"
+    fontWeight: 400
+    lineHeight: 1.6
   lede:
-    fontFamily: "Figtree Variable, Figtree, system-ui, sans-serif"
-    fontSize: "clamp(18px, 1.4vw, 21px)"
-    fontWeight: 400
-    lineHeight: 1.6
-  body:
-    fontFamily: "Figtree Variable, Figtree, system-ui, sans-serif"
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
     fontSize: "18px"
     fontWeight: 400
-    lineHeight: 1.6
+    lineHeight: 1.65
+  body:
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
+    fontSize: "17px"
+    fontWeight: 400
+    lineHeight: 1.65
+  body-sm:
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
+    fontSize: "15px"
+    fontWeight: 400
+    lineHeight: 1.65
+  caption:
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
+    fontSize: "14px"
+    fontWeight: 600
   label:
-    fontFamily: "Figtree Variable, Figtree, system-ui, sans-serif"
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
     fontSize: "13px"
     fontWeight: 700
-  note:
-    fontFamily: "Figtree Variable, Figtree, system-ui, sans-serif"
-    fontSize: "12px"
-    fontWeight: 400
+    letterSpacing: "0.02em"
+  label-caps:
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
+    fontSize: "13px"
+    fontWeight: 700
+    letterSpacing: "0.12em"
+  button:
+    fontFamily: "'Figtree Variable', 'Figtree', system-ui, sans-serif"
+    fontSize: "15px"
+    fontWeight: 700
+    letterSpacing: "0.02em"
 rounded:
-  tape: "4px"
-  field: "12px"
-  s: "14px"
-  tile: "16px"
-  notice: "18px"
-  card-s: "20px"
-  card: "22px"
-  frame: "28px"
-  pill: "999px"
-  round: "50%"
+  cap: "3px"
+  control: "6px"
+  card: "12px"
 spacing:
-  "1": "8px"
-  "2": "16px"
-  "3": "24px"
-  "4": "40px"
-  "5": "64px"
-  "6": "clamp(88px, 10vw, 152px)"
-  gutter: "clamp(20px, 4vw, 64px)"
+  space-1: "8px"
+  space-2: "16px"
+  space-3: "24px"
+  space-4: "40px"
+  space-5: "64px"
+  space-6: "clamp(80px, 9vw, 128px)"
+  gutter: "clamp(20px, 5vw, 80px)"
+  max: "1280px"
 components:
-  button-primary:
-    backgroundColor: "{colors.navy}"
-    textColor: "{colors.on-navy}"
+  button-gold:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.navy-deep}"
     typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: "0 28px"
-    height: "56px"
-  button-primary-hover:
-    backgroundColor: "{colors.deep}"
-    textColor: "{colors.on-navy}"
-  button-primary-compact:
+    rounded: "{rounded.control}"
+    padding: "0 26px"
+    height: "50px"
+  button-gold-hover:
+    backgroundColor: "{colors.gold-hover}"
+  button-navy:
     backgroundColor: "{colors.navy}"
-    textColor: "{colors.on-navy}"
-    rounded: "{rounded.pill}"
-    padding: "0 22px"
-    height: "46px"
+    textColor: "{colors.white}"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+    padding: "0 26px"
+    height: "50px"
+  button-navy-hover:
+    backgroundColor: "{colors.navy-deep}"
   button-outline:
-    backgroundColor: "{colors.white}"
+    backgroundColor: "transparent"
     textColor: "{colors.navy}"
-    rounded: "{rounded.pill}"
-    padding: "0 22px"
-    height: "48px"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+    padding: "0 26px"
+    height: "50px"
   button-outline-hover:
     backgroundColor: "{colors.navy}"
     textColor: "{colors.white}"
-  button-on-deep:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.deep}"
+  button-outline-light:
+    backgroundColor: "transparent"
+    textColor: "{colors.white}"
     typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: "0 28px"
-    height: "56px"
-  button-on-deep-hover:
-    backgroundColor: "{colors.mist}"
-    textColor: "{colors.deep}"
-  button-gold-on-navy:
-    backgroundColor: "{colors.gold}"
-    textColor: "{colors.deep}"
-    rounded: "{rounded.pill}"
-    padding: "0 18px"
-    height: "44px"
-  button-gold-on-navy-hover:
+    rounded: "{rounded.control}"
+    padding: "0 26px"
+    height: "50px"
+  button-outline-light-hover:
     backgroundColor: "{colors.white}"
-    textColor: "{colors.deep}"
-  input-field:
+    textColor: "{colors.navy-deep}"
+  input:
     backgroundColor: "{colors.white}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.field}"
+    rounded: "{rounded.control}"
     padding: "10px 14px"
     height: "48px"
-  input-field-bar:
-    backgroundColor: "{colors.mist}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.field}"
-    padding: "10px 14px"
-    height: "48px"
-  chip-fact:
-    backgroundColor: "{colors.mist}"
-    textColor: "{colors.deep}"
-    rounded: "{rounded.pill}"
-    padding: "6px 14px"
-  chip-status:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.deep}"
-    rounded: "{rounded.pill}"
-    padding: "3px 10px"
-  chip-status-recent:
-    backgroundColor: "{colors.gold}"
-    textColor: "{colors.deep}"
-    rounded: "{rounded.pill}"
-    padding: "3px 10px"
-  chip-choice:
+  choice-chip:
     backgroundColor: "{colors.white}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.control}"
     padding: "0 18px"
-    height: "44px"
-  chip-choice-selected:
+    height: "42px"
+  choice-chip-selected:
     backgroundColor: "{colors.navy}"
-    textColor: "{colors.on-navy}"
-    rounded: "{rounded.pill}"
-  card-panel:
+    textColor: "{colors.white}"
+  card-stage:
     backgroundColor: "{colors.white}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.frame}"
-    padding: "clamp(22px, 2.6vw, 36px)"
-  card-event:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.deep}"
     rounded: "{rounded.card}"
-    padding: "0 0 22px"
-  blog-panel:
+    padding: "32px 28px 30px"
+  panel:
+    backgroundColor: "{colors.white}"
+    rounded: "{rounded.card}"
+    padding: "clamp(24px, 2.6vw, 36px)"
+  panel-navy:
     backgroundColor: "{colors.navy}"
     textColor: "{colors.white}"
     rounded: "{rounded.card}"
-    padding: "clamp(20px, 2.4vw, 28px)"
-  form-bar:
+    padding: "clamp(24px, 2.6vw, 36px)"
+  form-card:
     backgroundColor: "{colors.white}"
     rounded: "{rounded.card}"
-    padding: "18px"
-  smile-tile:
+    padding: "clamp(24px, 3vw, 40px)"
+  care-card:
+    backgroundColor: "{colors.paper}"
+    rounded: "{rounded.card}"
+    padding: "clamp(24px, 3vw, 40px)"
+  resource-link:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.navy-deep}"
+    rounded: "{rounded.control}"
+    padding: "0 22px"
+    height: "58px"
+  resource-link-hover:
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.white}"
+  nav-link:
+    textColor: "{colors.navy-deep}"
+    padding: "8px 0"
+  utility-bar:
+    backgroundColor: "{colors.navy-deep}"
+    textColor: "{colors.on-navy-soft}"
+    height: "38px"
+  admissions-strip:
     backgroundColor: "{colors.gold}"
-    textColor: "{colors.deep}"
-    rounded: "{rounded.tile}"
-    size: "56px"
-  step-number:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.navy}"
-    rounded: "{rounded.round}"
-    size: "52px"
-  parent-link-tile:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.deep}"
-    rounded: "{rounded.tile}"
-    padding: "10px 18px"
-    height: "56px"
-  parent-link-tile-hover:
-    backgroundColor: "{colors.mist}"
-    textColor: "{colors.deep}"
-  founder-card:
-    backgroundColor: "{colors.mist}"
-    textColor: "{colors.deep}"
-    rounded: "{rounded.card-s}"
-    padding: "16px"
-  announcement-bar:
-    backgroundColor: "{colors.deep}"
-    textColor: "{colors.on-navy}"
-    height: "40px"
-    padding: "0 {spacing.gutter}"
-  masthead:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.ink}"
-    height: "88px"
-    padding: "0 {spacing.gutter}"
-  fee-notice:
-    backgroundColor: "{colors.navy-dark}"
-    textColor: "{colors.on-navy}"
-    rounded: "{rounded.notice}"
-    padding: "24px"
-  footer:
-    backgroundColor: "{colors.deep}"
-    textColor: "{colors.on-navy}"
+    textColor: "{colors.navy-deep}"
+    height: "58px"
 ---
 
 # Design System: BKG Global School
 
 ## Overview
 
-**Creative North Star: "The Drawn Route"**
+**Creative North Star: "The School Prospectus"**
 
-BKG Global School is a navy-and-white school world, dressed in the school's own colours, where a pen is always at work. Lines draw themselves under headlines, icons draw themselves in the proof grid, and a dotted route inks itself down the page as a parent scrolls from Pre-KG to Class X. Small flat illustrations (blocks, books, flasks, compasses, caps, a paper plane, an atom, a marigold flower, a diya, a lit hostel at night, a trophy) live around the school's real photographs. They idle gently and never perform. The illustrations make it lively, the heavy grotesque headlines and plain sentences make it serious, and the blazer navy with crest gold keeps it from feeling either childish or corporate.
+The site reads like a well-made printed prospectus from an established Indian school: the school's own photographs carry the page, set against navy and white grounds, with serif headings, a short gold rule under every section title, and gold accents used the way a crest uses metal leaf. The client rejected an earlier playful, illustrated version as not professional; this world is its replacement, modelled on the Bishop Cotton School site the client chose as a reference.
 
-The page is airy on white, with mist bands, one full navy band for the SMILE framework, and deep navy at both ends: the announcement bar on top and the footer below. Everything has an outline. Photos, cards, the form, step numbers, letter tiles and every illustration share the same 2.5px deep-navy stroke, so photography and drawing read as one material. Depth comes from outlines, tilt, tape and overlap, never from shadows.
+Density is generous and calm. Sections are full-bleed bands that alternate white, paper, navy and navy-deep grounds, each with a `1280px` reading column inside a fluid gutter. Photography is real and documentary: students in labs, at sport, at ceremony, and the Sandur hills. Depth comes from the photographs under navy scrims and from a few soft, navy-tinted shadows on white cards, never from texture or ornament.
 
-The system turns down the photo-hero-plus-three-cards template and the earlier rejected two-ink textbook look. Motion serves understanding: it guides the eye along the journey and never holds back information. With reduced motion everything is fully drawn and still.
+Motion is quiet and arrives once. The hero photo settles from a slow zoom while the headline, lede, actions and enquiry card rise in on a stagger; sections below the fold fade up as they enter; the campus figures count up; the header condenses on scroll. Every effect is static under reduced motion, and no content is ever hidden from a reader without JavaScript.
 
 **Key Characteristics:**
-- Navy and white as the school colours, with deep-navy outlines, mist and sky panels, crest gold for small faces and highlights, and tie red only as a spark inside drawings.
-- The official raster crest logo in the masthead. Never redraw it.
-- Bricolage Grotesque at 800 for headlines and Figtree for reading.
-- 2.5px deep-navy outlines on every frame, card, tile and illustration, with 28px-rounded photo frames and 22px-rounded cards.
-- Flat illustrations with round caps that draw on view and idle gently.
-- Pill-shaped actions and tags, round step numbers, tilted letter tiles.
-- No shadows. Depth comes from outline, tilt, tape and overlap.
+- Photo-led: only the school's own photographs, full-bleed under navy gradients or in 12px-rounded frames.
+- Navy and crest gold on white and paper grounds; gold is the accent, never the field (except the one admissions strip).
+- Source Serif 4 headings with italic for emphasis; Figtree for everything read or clicked.
+- A 56px gold rule under every section title, and an inset gold cap on featured cards.
+- 6px controls, 12px cards; hairline borders; soft navy-tinted shadows only.
+- Quiet, once-only motion on a single ease-out curve; all of it off under reduced motion.
 
 ## Colors
 
-A single cool family from deep navy to mist, warmed by crest gold and touched once in a while with tie red.
+A two-metal palette: deep school navy for structure and authority, crest gold for emphasis, on cool white and paper grounds.
 
 ### Primary
-- **Blazer Navy** (`navy`): the school colour. It is used for primary buttons, the selected choice chip, the SMILE teaching band, the blog panel, the inked journey route, emphasised headline words ("Serious learning.", "stick for good."), form labels, stage meta lines, timing terms and drawn icon strokes.
-- **Deep Navy** (`deep`): the outline and anchor colour. It covers every illustration stroke and photo, card, tile and form-bar border, the default heading colour, the hover state of navy buttons, the announcement bar and the footer.
-- **Navy Dark** (`navy-dark`): a step between navy and deep, used only for the fee-safety notice panel inside the deep footer.
-- **Royal Blue** (`royal`): the logo's lettering blue. It is declared but no surface uses it yet. Keep it in reserve for a brighter navy role and do not use it as a second primary.
+- **Midnight Blazer** (navy-deep): the deepest ground. Utility bar, footer, BKG-SMILE band, hero and campus image fallbacks, and the colour of every heading on light grounds. Also the base of every scrim and shadow tint.
+- **School Navy** (navy): the working navy. Navy buttons, the figures band, the blog panel, selected choice chips, input focus border, outline-button stroke, link colour on light grounds.
+- **Navy Mist** (navy-soft): the parents band ground; one tonal step off white for practical, reference content.
 
 ### Secondary
-- **Mist** (`mist`): soft panels. It covers the statement band, the news band, the visit panel, bar-form field fills, sleeping stage medallions, illustration fills, the founder card, fact chips, the masthead hairline and mobile nav dividers.
-- **Sky** (`sky`): the mid-blue. It covers illustration fills, the dotted unread journey route, resting borders on inputs, choice chips, parent tiles and the menu toggle, proof-grid dividers, photo tape, text selection, and the footer fact terms and "Global School".
-
-### Tertiary
-- **Crest Gold** (`gold`): the crest's gold. It appears in illustration fills (flower, books, pencil, flame, trophy, windows, tassel), hand-drawn underline scribbles, tick fills, the SMILE letter tiles, the "Recent" status tag, the blog-panel button, the motto on the footer, ticker dots, nav hover underlines, focus rings, the skip link and photo tape.
-- **Tie Red** (`red`): the school tie's red. It is used only as a small fill inside an illustration, such as the core of the diya flame or the centre of a flower.
+- **Crest Gold** (gold): the accent metal. Section-title rules, card caps, the primary call-to-action button, the admissions strip, hero emphasis word, figure values, SMILE letters, nav-link hover underline, focus outlines, icons in the utility bar, footer motto and hover links. Text use only on navy grounds.
+- **Polished Gold** (gold-hover): gold button hover; lighter, never darker.
+- **Antique Gold** (gold-deep): gold that has to sit on light grounds as content: admission step numbers, check marks, arrow icons in resource links, the enquiry success mark. Not for text below title size on light grounds (about 4:1 on white).
+- **Gold Wash** (gold-soft): text selection background only.
 
 ### Neutral
-- **White** (`white`): the page ground, card and panel faces, and a fill colour inside illustrations.
-- **Ink** (`ink`): body text and input values.
-- **Ink Soft** (`ink-soft`): ledes, supporting paragraphs, placeholders, captions and the disabled button.
-- **On Navy / On Navy Soft** (`on-navy`, `on-navy-soft`): text on navy and deep grounds, with the soft tint for secondary copy. Dividers on dark grounds are translucent white hairlines (`#ffffff33`).
-- **Error Red** (`error-red`): field error borders and messages. It is hard-coded in the form CSS and is not a custom property yet. It is not tie red.
-- **Placeholder Cream** (`placeholder-cream`): the global `.placeholder` highlight for an unconfirmed fact, and the glow of lit windows in the residential drawing.
+- **White** (white): default page ground, cards, header, form fields.
+- **Paper** (paper): alternate light ground (Chairman, Happenings) and the residential-care card; also the scrollbar track.
+- **Ink** (ink): body text and field values.
+- **Slate Ink** (ink-soft): ledes, secondary body copy, card descriptions.
+- **Placeholder Slate** (placeholder): form placeholders only.
+- **Hairline** (line): all borders and dividers on light grounds. **Hairline Lift** (line-hover) is the stage-card hover border; **Field Hover** (input-hover) is the input and select hover border; **Mist Hairline** (line-on-navy-soft) divides the timings list on navy-soft.
+- **Moonlit Text** (on-navy-soft): secondary text on navy grounds: utility bar, hero lede, figure labels, captions, footer copy.
+- **On-navy hairlines** (hairline-on-navy 0.15 on navy-deep bands and the blog panel; hairline-on-navy-faint 0.12 for the footer base rule; hairline-on-navy-strong 0.18 between figures on navy): white at low alpha, the only divider on dark grounds.
+- **Light Outline** (outline-light): stroke of the outline button on photography.
+
+### Status and state tints
+- **Tie Red** (red): form error borders and error messages only.
+- **Gold Focus Halo** (gold-focus-ring): the 3px ring around a focused input or select.
+- **Gold Hairline** (gold-border): the 1px border of the footer's public-notice box on navy-deep.
+- **Navy Shadow** (navy-shadow): the base alpha for card and header shadows (see Elevation).
 
 ### Named Rules
-**The Crest Gold Rule.** Gold appears as a stroke, an illustration fill, a highlight a few pixels wide, or a small face of 56px or less (letter tiles, status tags, one pill button on a navy panel). Never use it for a section band, a large panel or the primary action. Gold text appears only on deep or navy grounds, never on white.
+**The Metal Leaf Rule.** Gold is an accent laid onto navy or onto a hairline, never a large field. The single exception is the admissions strip directly under the hero. Gold text belongs on navy grounds; on white or paper, content in gold uses Antique Gold.
 
-**The Tie Red Rule.** Red is a spark, not a colour role. Use it only as a small fill inside a drawing, and never for text, borders, buttons or errors.
-
-**The Deep Outline Rule.** On light grounds, deep navy is the only outline colour. Every new figure, frame, tile or card on white or mist gets a deep-navy stroke, so drawings and photos belong to the same world.
+**The Navy-Tinted Shadow Rule.** Every shadow and scrim is tinted from Midnight Blazer (`rgb(11 24 56 / …)`), never neutral grey. The hero enquiry card, floating over a photograph, is the one black shadow.
 
 ## Typography
 
-**Display Font:** Bricolage Grotesque Variable (fallback: Bricolage Grotesque, system-ui, sans-serif), self-hosted via @fontsource-variable
-**Body Font:** Figtree Variable (fallback: Figtree, system-ui, sans-serif), self-hosted via @fontsource-variable
+**Display Font:** Source Serif 4 (variable, with Georgia, serif fallback)
+**Body Font:** Figtree (variable, with system-ui, sans-serif fallback)
 
-**Character:** A chunky, slightly quirky grotesque, set heavy and tight, gives the school a confident voice. Figtree's open, friendly shapes keep long reading calm.
+**Character:** An institutional, bookish serif set at weight 600 with slight negative tracking, paired with a friendly, upright geometric sans. Serif italic in a lighter weight (400–500) is the voice for emphasis, quotations and numerals.
+
+All headings (h1–h3) default to the serif at 600, line-height 1.12, letter-spacing -0.01em, `text-wrap: balance`, coloured Midnight Blazer (white on navy grounds). Body is 17px at 1.65 with lining numerals.
 
 ### Hierarchy
-- **Display** (800, `clamp(46px, min(6vw, 10svh), 96px)`, line-height 0.98, -0.035em, opsz 96): the hero headline only. It is capped by viewport height so the form stays in the first viewport.
-- **Statement** (700, `clamp(34px, 4.6vw, 72px)`, line-height 1.12): one large deep-navy sentence on mist, with photo pills set inline.
-- **Headline** (800, `clamp(36px, 4.4vw, 64px)`, line-height 1.02): section h2s. Split-layout h2s step down: the chairman h2 to `clamp(32px, 3.6vw, 52px)`, card-scale h2s to `clamp(28px, 2.8vw, 40px)`, and the parents h2 to `clamp(28px, 2.6vw, 38px)`.
-- **Title** (800, `clamp(30px, 3vw, 44px)`, line-height 1.05): journey stage names.
-- **Figure** (800, `clamp(26px, 2.4vw, 36px)`, line-height 1): proof values such as "17 acres", with a 16px/600 ink-soft label below.
-- **Title Small** (700 to 800, 24px): SMILE principle, admission step, life pillar and blog-panel titles. Event-card titles are 19px/700 and person names 20 to 22px/700.
-- **Quote** (Bricolage 500, `clamp(22px, 2vw, 28px)`, line-height 1.4, max 34ch): the chairman's words.
-- **Button** (Bricolage 700, 18px): every primary pill action. Compact and secondary pills inherit 16px.
-- **Lede** (400, `clamp(18px, 1.4vw, 21px)`, max 44ch, ink-soft): the hero introduction. Section intros sit at 19px in ink-soft.
-- **Body** (400, 18px, line-height 1.6): all reading text, with supporting paragraphs up to about 48 to 52ch.
-- **Label** (700, 13 to 14px, navy on light, sky on deep): form labels, timing terms and footer fact terms, in sentence case.
-- **Note** (400, 12 to 14px, ink-soft): captions and photo notes.
+- **Display** (600, clamp(44px, 5.6vw, 80px), 1.04, -0.02em): the hero headline only, white, with one emphasised word in gold italic at 500.
+- **Headline Feature** (600, clamp(36px, 4.4vw, 60px)): the campus band headline over photography, max 16ch.
+- **Headline** (600, clamp(32px, 3.6vw, 48px)): every section title, followed by the gold rule.
+- **Figure** (600, clamp(40px, 4.4vw, 60px), 1, tabular numerals): campus figures in gold on navy, with a unit at 0.4em/500 in white.
+- **Letter** (600, 64px, 1): the BKG-SMILE initials, gold on navy-deep.
+- **Numeral** (500 italic, 40px, 1): roman stage numerals on academic stage cards.
+- **Quote** (italic, clamp(24px, 2.4vw, 34px), 1.3): the Chairman's words.
+- **Pull** (italic, clamp(22px, 2vw, 28px), 1.35): the welcome pull quote, navy, behind a 2px gold left rule.
+- **Epigraph** (italic, clamp(20px, 2vw, 26px)): the Gandhi line over the campus photo, in gold.
+- **Title Large** (600, 26–28px): card headings: hero enquiry card (26px), care card (26px), visit form card (28px), step numbers (28px); the distance values on campus (26px).
+- **Title** (600, 24px): stage card and happenings panel headings.
+- **Title Small** (600, 20–22px): admission step and SMILE titles (21px), photo-tile caption titles and the success message (22px), Chairman name and timing labels (20px).
+- **List Serif** (400, 19px): event names in happenings lists.
+- **Lede Hero** (400, clamp(17px, 1.3vw, 20px), 1.6, max 50ch): the hero lede in Moonlit Text.
+- **Lede** (400, 18px, max 62ch): section ledes in Slate Ink; the footer motto uses 18px serif italic gold.
+- **Body** (400, 17px, 1.65, max 62ch): running copy.
+- **Body Small** (400, 15px): card descriptions, list items, form lede, nav links (15px/600, 17px in the mobile menu), footer text.
+- **Caption** (600, 14px): roles, notes, class ranges (14px/700 navy), photo captions, citations.
+- **Label** (700, 13px, 0.02em): form labels and legends; the utility bar and footer base line are 13px regular; error text is 13px/600.
+- **Label Caps** (700, 13px, 0.12em, uppercase): footer column headings only.
+- **Button** (700, 15px, 0.02em): all buttons.
 
 ### Named Rules
-**The Heavy Head Rule.** Set headings in Bricolage at 700 to 800 with negative tracking and `text-wrap: balance`. Body and labels are always Figtree.
+**The Italic Voice Rule.** Emphasis, quotations and stage numerals are set in Source Serif 4 italic; never bold a word for emphasis inside a heading.
 
-**The Sentence-Case Rule.** No text is uppercased anywhere in the system. Labels stay small, bold and in sentence case.
+**The Gold Rule Rule.** Every section title carries a 56px by 2px gold rule 18px below it, centred when the title is centred. A section heading without it is out of system.
 
 ## Layout
 
-The page is a full-bleed vertical story with gutters of `clamp(20px, 4vw, 64px)`. Major sections pad with `clamp(88px, 10vw, 152px)` and alternate grounds. The order runs: deep announcement bar, white masthead and hero, mist statement, white why-choose and journey, navy SMILE band, white chairman's message, life and campus, mist news, white admissions (with a mist visit panel), white parents, and a deep footer. Spacing follows an 8 / 16 / 24 / 40 / 64 step scale.
+Full-bleed bands, each padded `space-6` (clamp(80px, 9vw, 128px)) vertically and `gutter` (clamp(20px, 5vw, 80px)) horizontally, with content in a centred column of max `1280px`. Bands alternate grounds: white, paper, navy, navy-deep, navy-soft, and two photographic bands (hero, campus). The figures band uses `space-5` (64px) padding; the campus band uses clamp(96px, 12vw, 168px).
 
-- The hero is a two-column grid at `100svh` minus 128px (the 40px bar plus the 88px masthead). Copy and the bar form sit on the left, and the outlined photo with its illustrations on the right.
-- Why-choose is a 5:7 split with the outlined two-by-two proof grid on the right.
-- The journey is a centred route, at most 1100px wide, with an S-curve down the middle. Stage rows alternate sides.
-- Teaching and admissions are 1:1 splits. The chairman's message is a 4:8 split, at most 1240px wide. Parents is a 1:2 split with an auto-fit grid of tiles at least 220px wide.
-- Life is a five-column row of 3:4 tilted frames. It becomes 3+2 at 1100px and two columns at 640px, where the last pillar spans the row at 16:9.
-- On the campus band, a white card overlaps the bottom edge of a wide 16:8 photo, at most 1320px wide.
-- News is a 3:1 grid of three-up event cards and a navy blog panel.
-- Breakpoints: at 1240px the bar form's submit drops to its own row. At 1100px life goes 3+2 and the news grid stacks. At 1080px every split stacks. At 900px a menu toggle replaces the nav, the journey becomes a left rail with 88px medallions, and the campus card drops below its photo. At 820px the chairman split stacks. At 760px the ticker's utility links hide and its badge shrinks to an icon. At 720px event cards turn into horizontal rows. At 640px life goes to two columns. At 560px the hero art tightens and the proof grid goes to one column. At 480px the bar form stacks.
+Spacing steps are 8 / 16 / 24 / 40 / 64px plus the fluid section step; component internals also use 4, 6, 10, 12, 14, 18, 20 and 22px. Grid gaps between cards are 20–24px; between two-column halves clamp(40px, 6vw, 96px).
+
+Recurring compositions: the hero is a 1.25fr / 0.75fr split (copy left, enquiry card right) with min-height min(100svh − 130px, 780px); two-column copy/photo splits for Welcome, Chairman, Admissions and Parents; four-up stage cards; a five-column SMILE grid divided by hairlines; a three-column photo mosaic with one tall tile; four-up figures divided by hairlines.
+
+Responsive breakpoints in use: 1080px (hero stacks, nav collapses to a menu, stages and SMILE go two-up), 960px (mosaic, happenings, admissions and footer go two-up or single), 860px (welcome, chairman, parents stack; figures two-up), 760px (utility bar trims), 600px and 560px (single column; hero scrim turns vertical; hero buttons go full width).
 
 ## Elevation & Depth
 
-The system has no shadows at all. Depth comes from the shared 2.5px deep-navy outline, slight rotations, translucent strips of tape that pin photos into the drawn world, cards overlapping photo edges, and illustrations breaking out of photo frames. Rotations run -2deg on the teaching and chairman photos, plus or minus 3deg on photo pills, plus or minus 1.5deg on life frames and plus or minus 4deg on letter tiles. The masthead is the only layered surface: 92% white with `saturate(1.4) blur(12px)` and a 1.5px mist hairline.
+Mostly flat, with depth from photography and tonal grounds. Cards sit on hairlines at rest; soft navy-tinted shadows appear on floating cards and as a response to state (header on scroll, stage card on hover). Photographs carry navy gradients to hold white text.
+
+### Shadow Vocabulary
+- **Header condensed** (`box-shadow: 0 6px 24px rgb(11 24 56 / 0.08)`): sticky header once the page scrolls.
+- **Menu drop** (`box-shadow: 0 16px 32px rgb(11 24 56 / 0.1)`): the mobile navigation panel.
+- **Card lift** (`box-shadow: 0 20px 40px rgb(11 24 56 / 0.08)`): academic stage card on hover, with a 4px rise.
+- **Floating card** (`box-shadow: 0 24px 48px rgb(11 24 56 / 0.08)`): the sticky visit-form card.
+- **Inset photo** (`box-shadow: 0 24px 48px rgb(11 24 56 / 0.16)`): the smaller overlapping welcome photo, with an 8px white border.
+- **Over photography** (`box-shadow: 0 30px 60px rgb(0 0 0 / 0.25)`): the hero enquiry card only.
+
+### Scrims
+- **Hero scrim**: `linear-gradient(90deg, rgb(11 24 56 / 0.94) 0%, rgb(11 24 56 / 0.82) 42%, rgb(11 24 56 / 0.35) 75%, rgb(11 24 56 / 0.2) 100%)`; below 560px `linear-gradient(180deg, rgb(11 24 56 / 0.78) 0%, rgb(11 24 56 / 0.92) 60%)`.
+- **Campus scrim**: `linear-gradient(90deg, rgb(11 24 56 / 0.88) 0%, rgb(11 24 56 / 0.6) 50%, rgb(11 24 56 / 0.15) 100%)`.
+- **Caption scrim**: `linear-gradient(to top, rgb(11 24 56 / 0.9), rgb(11 24 56 / 0))` under photo-tile captions.
 
 ### Named Rules
-**The Paper, Not Plastic Rule.** Use no `box-shadow` or drop shadow anywhere. If an element needs lift, give it an outline, a tilt, tape or an overlap.
+**The Flat-Until-Asked Rule.** Cards in a grid are flat on a hairline at rest; shadow is earned by floating (a form card) or by interaction (hover, scroll).
 
 ## Shapes
 
-Every shape is soft and drawn.
-
-- **Photo frames and panel cards** (`rounded.frame`, 28px) carry a 2.5px deep-navy border. This covers the hero, teaching, chairman and campus photos, the proof grid, the campus card and the visit panel.
-- **Cards** (`rounded.card`, 22px) cover event cards, life frames, the blog panel and the hero form bar.
-- **Actions, tags, choices and inline photo pills** are full pills (999px).
-- **Medallions and step numbers** are circles with a 2.5px deep-navy border.
-- **Tiles and controls** use smaller radii: 16px letter tiles (2.5px deep border), 16px parent tiles (2px sky), 12px fields (2px sky), a 14px menu toggle (2px sky), a 20px founder card and success card, and an 18px fee notice with a translucent white border.
-- **Dividers** are 1.5px hairlines: mist on white, sky inside the proof grid, and translucent white on dark grounds.
-- **Tape** is a 110 to 120 by 28 to 30px rectangle with 4px corners, a 2px deep outline, sky or gold at 80 to 85% opacity, and a 3 to 5deg rotation.
-
-**The Three Weights Rule.** Borders come in three weights: 2.5px deep navy for frames, tiles and figures, 2px for interactive controls and tape, and 1.5px for dividers and small status tags.
-
-### Illustration grammar
-Illustrations are flat inline SVG. Fills come from navy, deep, sky, mist, gold and white, with tie red as a single small spark. Every shape has a 2.5px deep outline (2px on small details), with round caps and joins on open strokes. Accent strokes are thicker: 3 to 3.5px for ticks and tassels, 5 to 6px for underline scribbles, roof lines and the inked route. Line icons in the proof grid are 2.5px navy strokes on a mist disc that draw on view. There are no gradients and no textures. Figures stay small and sit around a photo, inside a medallion, a card thumbnail or a life frame. They never fill a whole hero.
-
-### Motion
-- **Draw-on-view:** stroked paths (`pathLength="1"`) draw from dashoffset 1 to 0 over 1.1s with ease-out after a 0.15s delay, triggered by an intersection observer. A figure is fully drawn by default and is only primed for drawing when script runs, motion is allowed and the figure is still off-screen.
-- **Scroll-drawn route:** the journey route inks itself in proportion to scroll progress (pivot at 60% of the viewport) over a sky dotted guide (`2 12` dash). As the ink reaches each stage, its medallion springs from 0.82 scale and 55% opacity to full and its figure starts an idle loop.
-- **Idle loops:** gentle loops of 1.8 to 7s. A pencil wiggles, an apple bobs, blocks hop, a page turns, bubbles rise, an arc draws, compass legs swing, a tassel sways, sparkles and stars twinkle, hostel windows glow, and a diya flame flickers. An atom spins with orbits at 5s and 40s, the flower turns at 18s, and the plane flies its dotted loop in 7s.
-- **Ticker:** announcements scroll at 32s linear and pause on hover or focus.
-- **Hover:** spring easing (`cubic-bezier(0.34, 1.56, 0.64, 1)`). Buttons lift 2px, arrows nudge 3 to 4px, event cards lift 6px with a -0.6deg tilt, life frames straighten and lift 6px, letter tiles straighten and scale 1.08, photo pills widen, and the logo scales 1.04. State fades use ease-out (`cubic-bezier(0.16, 1, 0.3, 1)`) at 160 to 260ms.
-- **Reduced motion:** all durations collapse to 0.01ms. Figures render fully drawn, the route is fully inked, every stage is awake, the plane rests at 82% of its loop, and the ticker stops, hides its duplicate and becomes horizontally scrollable.
+Two radii, applied by role: gently rounded controls (`control`, 6px) for buttons, fields, chips, resource links, the skip link, the menu toggle and the founder portrait; softly rounded containers (`card`, 12px) for every card, panel, photo and the footer logo plate. The gold cap is a 3px bar inset 24px from each side of a card's top edge, rounded only on its lower corners (`cap`, 3px) so it clears the card's corners. Borders are 1px hairlines, 1.5px on outline buttons and the Chairman portrait's offset gold frame, 2px for gold rules. The only circle is the 5px dot separator in the admissions strip.
 
 ## Components
 
 ### Buttons
-Confident pills in the display face.
-- **Shape:** full pill (999px).
-- **Primary:** navy face with white Bricolage 700 text at 18px, 56px tall with 0 28px padding. A trailing inline-SVG arrow with round caps is optional.
-- **Compact (nav):** 46px tall with 0 22px padding.
-- **Outline (secondary):** 48px, a 2px navy border and navy text. On hover it fills navy with white text and the arrow nudges 4px.
-- **On deep (footer):** white face with deep text. Hover turns it mist.
-- **Gold on navy:** 44px, a gold face with deep text, used only inside a navy panel (the blog panel). Hover turns it white.
-- **Hover / Focus / Active:** hover turns the primary face deep and nudges the arrow 4px right, or lifts the button 2px when there is no arrow. Focus shows a 3px gold outline at a 2 to 3px offset. Active scales to 0.98. Disabled turns ink-soft with a progress cursor.
-- **Text link with arrow:** Bricolage 700 in navy. On hover it underlines and the arrow nudges 4px.
+Solid, confident, and quiet in motion.
+- **Shape:** gently rounded (6px), min-height 50px (46px for the header CTA), padding 0 26px, 1.5px border, 15px/700 Figtree with 0.02em tracking.
+- **Gold (primary call to action):** Crest Gold with Midnight Blazer text; hover lightens to Polished Gold.
+- **Navy:** School Navy with white text; hover deepens to Midnight Blazer. The header's "Admissions 2026–27" and in-section primary actions.
+- **Outline:** School Navy stroke and text; hover fills navy with white text.
+- **Outline Light:** 70% white stroke and white text, for use over photography; hover fills white with Midnight Blazer text.
+- **Hover / Focus:** colour transitions at 200ms; a trailing arrow icon nudges 3px right over 240ms. Focus is the global 2px gold outline, 3px offset.
 
-### Chips
-- **Fact chips:** mist pills with deep 14px/600 text and 6px 14px padding, for display only (campus distances).
-- **Status tags:** 12px/700 pills with a 1.5px deep border, pinned to the top-left of an event thumbnail. "Past" is white and "Recent" is gold.
-- **Choice chips:** 44px pills with a 2px sky border and ink text. Hover brings a navy border. Selected chips are filled navy with white text. The native radio stays in place, invisible, and focus-visible shows a gold ring.
+### Chips (choice chips)
+- **Style:** used inside the enquiry form for choices; 42px tall, padding 0 18px, 1px hairline border, 6px radius, 15px/600 Ink.
+- **State:** hover borders navy; selected fills School Navy with white text; keyboard focus shows a 2px gold outline at 2px offset.
 
 ### Cards / Containers
-- **Corner Style:** 28px for panels, 22px for cards.
-- **Background:** white on white or mist, or over photos. Mist for the visit panel. Navy for the blog panel.
-- **Shadow Strategy:** none (see Elevation & Depth).
-- **Border:** 2.5px deep. The navy blog panel has no border.
-- **Internal Padding:** `clamp(20px, 2.4vw, 32px)` to `clamp(24px, 3vw, 40px)`.
+- **Corner Style:** softly rounded (12px).
+- **Stage card:** white, 1px hairline, padding 32px 28px 30px; a gold cap starts at one quarter width and draws full across on hover (400ms) while the card rises 4px with Card lift and a Hairline Lift border.
+- **Panel:** white on paper, 1px hairline, clamp(24px, 2.6vw, 36px) padding, static gold cap; the navy variant (blog) takes School Navy with white text and on-navy hairlines between items.
+- **Form card:** white, hairline, clamp(24px, 3vw, 40px) padding, gold cap, Floating card shadow, sticky at 110px on wide screens.
+- **Care card:** Paper ground, gold cap, two-column check list with Antique Gold check icons.
+- **Photo tile:** 12px-rounded photograph on a navy-deep fallback, min-height 260px, with a serif title and caption over the Caption scrim; the image scales to 1.04 over 1200ms on hover.
 
 ### Inputs / Fields
-- **Style:** 48px tall, 12px radius, a 2px sky border, white fill, ink text at 17px, 10px 14px padding and a navy caret. Selects use a navy chevron drawn in inline SVG. Labels sit above the field in 13px/700 navy.
-- **Focus:** a 3px gold outline at a 2px offset. Hover brings a navy border.
-- **Error:** an error-red border with an error-red 14px/600 message below, linked by `aria-describedby`.
-
-### Visit form (signature)
-One form component with two layouts.
-- **Bar:** used in the hero. A white container with a 2px deep border, a 22px radius and 18px padding. The stage select spans the top row, and name, contact and submit share the second. Fields are filled mist with mist borders. On error a field turns white with a red border.
-- **Full:** used in the visit panel. Fields stack, and a "Best time to visit" set of choice chips is added.
-- **Success:** a white card with a 2px deep border and a 20px radius. A gold tick medallion pops in with spring easing.
+- **Style:** white, 1px Hairline, 6px radius, min-height 48px, padding 10px 14px, 16px text in Ink; labels 13px/700 Midnight Blazer above with a 6px gap; selects carry a navy chevron.
+- **Hover:** border to Field Hover.
+- **Focus:** border to School Navy plus a 3px Gold Focus Halo; no outline.
+- **Error:** Tie Red border and a 13px/600 Tie Red message below. Submit disables at 0.7 opacity with a progress cursor.
+- **Success:** the form is replaced by an Antique Gold check mark, a 22px serif lead line, and a text-link reset.
 
 ### Navigation
-- **Announcement bar:** a 40px deep strip above the masthead. A navy "Announcements" pill with a gold speaker icon sits beside a scrolling ticker of 14px notices separated by gold dots, with edges faded by a mask. Phone and email utility pills in on-navy-soft turn navy on hover.
-- **Masthead:** sticky, 88px, translucent white with a mist hairline. It holds the official crest logo (raster, 76px tall, 66px at 900px and below), 16px/600 links and a compact primary button. Each link hover draws a 3px gold underline from left to right. "Parents" sits apart, beside the button.
-- **Mobile (900px and below):** a 48px menu toggle with a 14px radius and sky border opens a white drop panel. Links are 20px with mist dividers, and the button runs full width at 56px.
+- **Utility bar:** Midnight Blazer, 38px tall, 13px Moonlit Text; gold line icons for phone and mail; links turn white on hover.
+- **Masthead:** sticky white header with a hairline base; 92px tall with a 74px logo, condensing to 76px and a 60px logo with the Header condensed shadow once scrolled (300ms).
+- **Links:** 15px/600 Midnight Blazer; hover draws a 2px gold underline from the left (260ms).
+- **Mobile (below 1080px):** a 46px bordered menu toggle opens a full-width white panel with hairline-separated 17px links, the navy CTA below, and the Menu drop shadow.
+- **Footer:** Midnight Blazer, four columns (1.4fr 1fr 1fr 1fr), a white logo plate, a gold serif-italic motto, uppercase column headings, links that turn gold on hover, and a public-notice box with a Gold Hairline border.
 
-### Proof grid (signature)
-A white, 28px-rounded, 2.5px deep-outlined two-by-two grid divided by 1.5px sky hairlines. Each cell has a 64px drawn line icon (navy strokes on a mist disc, drawn on view), a Figure value in deep and a 16px/600 ink-soft label.
+### Resource Links
+White 58px rows with 6px radius, 700 Midnight Blazer label and an Antique Gold arrow; hover fills School Navy with white text, the arrow turns Crest Gold and nudges 3px right.
 
-### Stage row (signature)
-A circular medallion (`clamp(150px, 16vw, 220px)`, 88px on mobile) with a mist face, a 2.5px deep border and an illustration inside. Beside it sit a stage title, a 15px/700 navy meta line and an ink-soft summary. Rows alternate sides and the route runs between them. When the route reaches a row, its face turns white and the figure animates.
+### Section Title (signature)
+Serif Headline, then a 56px by 2px gold rule 18px below, then an 18px Slate Ink lede at max 62ch 24px below. Centred and light (white title, Moonlit lede) variants exist.
 
-### SMILE letter tiles
-A vertical list on the navy band. Each item has a 56px gold tile with a 16px radius and a 2.5px deep border, holding one Bricolage 800 letter at 30px in deep. Tiles tilt -4deg and +4deg alternately and straighten on hover. Beside each tile sit a white 24px/700 title and on-navy-soft text, above a translucent white hairline.
+### Figures and Dividers (signature)
+Numbers in gold serif separated by vertical on-navy hairlines; stepped lists (admission steps, timings, events) separated by horizontal hairlines rather than boxed.
 
-### Chairman message and founder card
-A tilted 4:5 portrait in a 28px deep-outlined frame, pinned with gold tape and captioned by name (22px/700) and role. The words column carries the headline, a gold drawn quote mark, the Quote-size statement, an ink-soft follow-up and an outline button. Below that sits the founder card: a mist card with a 20px radius and 16px padding, an 84 by 108px greyscale portrait with a 14px radius and 2px deep border, a 20px/700 name, a 14px/600 navy role and a 15px italic ink-soft quote.
-
-### Life pillars
-Five 3:4 frames with a 22px radius and 2.5px deep border, tilted by plus or minus 1.5deg. Each holds a school photo or, where no photo exists, a drawn scene on mist (a night-time hostel on a deep disc, a diya on a white disc). Below each sit a 24px/800 title and 16px ink-soft text.
-
-### Event cards and blog panel
-Event cards are white, 22px-rounded and deep-outlined, with a 16:10 mist thumbnail of a flat illustration above a 2.5px deep rule, a status tag and a 19px/700 deep title. At 720px they become 120px-thumbnail rows. The blog panel is navy with white 16px/600 post links on translucent hairlines, 13px on-navy-soft dates and a gold pill button.
-
-### Campus band
-A 16:8 landscape photo in a 28px deep-outlined frame, pinned with gold tape. A white campus card overlaps its bottom-left edge, holding a cited quote (Bricolage 18px/600 navy, 14px ink-soft cite), a card-scale h2, ink-soft copy and fact chips.
-
-### Step numbers
-52px white circles with a 2.5px deep border, holding a navy Bricolage 800 numeral at 22px.
-
-### Parent link tiles and timings
-Parent link tiles are 56px rows with a 2px sky border and 16px radius, holding a deep 700 label and a navy diagonal arrow. On hover the face turns mist, the border turns navy and the arrow moves 3px up and to the right. School timings beside them are a definition list with 14px/700 navy terms and 15px ink-soft values.
-
-### Footer and fee-safety notice
-The footer has a deep ground. It carries an oversized text mark (`clamp(48px, 7.4vw, 116px)`, with "Global School" in sky), the motto in gold Bricolage 600, an on-deep button, and a four-column fact list (13px sky terms, 15px values) above a translucent hairline. The fee-safety notice follows: a navy-dark panel with an 18px radius, a 1.5px translucent white border and 24px padding, a navy shield-and-tick icon, an 18px/700 white heading and 14px on-navy-soft copy at most 90ch. A 13px imprint closes the page.
+### Motion grammar
+One curve: `cubic-bezier(0.22, 1, 0.36, 1)`. State changes run 160–300ms; reveals 900–1100ms; the hero photo settle 16s.
+- **Hero settle:** the hero photograph scales from 1.08 to 1 over 16s.
+- **Hero rise:** headline, lede, actions and enquiry card rise 18px and fade in over 1100ms at 0, 150, 300 and 400ms.
+- **Scroll entrances (AOS-style, `appReveal` + `revealFrom`):** below-the-fold blocks enter over 1000ms when 12% visible: `up`/`down` (40px), `left`/`right` (80px slide), `zoom` (from 0.88), `zoom-out` (from 1.08), `flip` (18° tilt). Paired columns enter from opposite sides (text from the left, media from the right); lists stagger 90–140ms. Armed only when scripting runs, motion is allowed, and the element starts below the fold; a shared scroll check reveals anything a jump carried the page past.
+- **Count up:** figures count from zero over 1400ms (ease-out quart) when 60% visible; the real value is always in the markup.
+- **Header condense:** height, logo and shadow transition over 300ms.
+- **Floating learning icons** (`app-particles`, client request 2026-11-03): thin outline icons (open book, light bulb, pencil, graduation cap, globe, flask, star), 22–42px, 1.6px stroke, drift slowly upward with a gentle turn and a soft opacity pulse, behind the content of a `.has-particles` section. Crest gold on navy grounds (opacity 0.45–0.75), navy (0.3) or deep gold (0.45) on white grounds. About 1–1.8 icons per 100,000 px², capped at 28 per section. Paused off screen.
+- All of it is static under `prefers-reduced-motion: reduce` (the icons render as one still frame).
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** outline every photo frame, card, tile, medallion and illustration shape in 2.5px deep navy.
-- **Do** round photo frames and panels at 28px and cards at 22px, and shape every action, tag and choice as a 999px pill.
-- **Do** draw illustrations as flat shapes in navy, deep, sky, mist, gold and white, with round caps and joins.
-- **Do** use the official raster logo (`public/images/bkg/logo.png`) as the brand mark.
-- **Do** let lines draw on view (1.1s ease-out) and let figures idle gently. Use spring easing for hover.
-- **Do** render everything fully drawn and still under `prefers-reduced-motion`, and let tickers stop and scroll by hand.
-- **Do** set headings in Bricolage Grotesque at 700 to 800 with negative tracking, and body text in Figtree at 18px/1.6.
-- **Do** use a 3px gold outline for every focus state.
+- **Do** lead with the school's own photographs, under a navy scrim when text sits on them.
+- **Do** put the 56px gold rule under every section title.
+- **Do** use Source Serif 4 italic for emphasis, quotations and numerals, and Figtree for body, labels and buttons.
+- **Do** keep controls at 6px and containers at 12px radius.
+- **Do** tint every shadow and scrim from navy-deep (`rgb(11 24 56 / …)`).
+- **Do** set gold text only on navy grounds; use Antique Gold for content on white or paper, at title size or larger.
+- **Do** separate lists and figures with hairlines rather than boxing each item.
+- **Do** keep motion to the five grammar moves on the one ease-out curve, and make each static under reduced motion.
 
 ### Don't:
-- **Don't** use `box-shadow` or drop shadows. Depth comes from outline, tilt, tape and overlap.
-- **Don't** use gold for a section band, a large panel, the primary action, or text on white.
-- **Don't** use tie red for text, borders, buttons or error states.
-- **Don't** redraw, recolour or rebuild the crest logo as SVG or type.
-- **Don't** add gradients, textures or detailed rendering to illustrations.
-- **Don't** uppercase labels or put small labels above headings.
-- **Don't** set body or label text in Bricolage, or headings in Figtree.
+- **Don't** use illustrations, mascots, decorative drawings or stock imagery; the client rejected the illustrated world as not professional. Small functional line icons (arrows, phone, mail, check) are part of the system.
+- **Don't** flood a band in gold other than the admissions strip.
+- **Don't** add hard, offset or grey shadows; depth is soft and navy-tinted.
+- **Don't** add a third radius or pill-shaped buttons.
+- **Don't** hide content until a script runs, or loop any animation.

@@ -1,7 +1,8 @@
-<footer class="footer" id="contact">
+<footer class="footer has-particles" id="contact">
+  <app-particles [density]="1.1" [opacity]="0.45" [scale]="0.9" />
   <div class="wrap">
     <div class="grid">
-      <div class="brand">
+      <div class="brand" appReveal revealFrom="left">
         <div class="logo-plate">
           <img src="images/bkg/logo.png" width="853" height="462" alt="BKG Global School, Sandur" loading="lazy" />
         </div>
@@ -9,7 +10,7 @@
         <p class="about">A CBSE day and residential school for boys and girls in Sandur, Karnataka. A BKG Group institution.</p>
       </div>
 
-      <div>
+      <div appReveal="120">
         <h2 class="col-title">Contact</h2>
         <address>
           Ballari Road, Krishnanagar<br />
@@ -23,14 +24,14 @@
         </ul>
       </div>
 
-      <nav aria-labelledby="footer-about">
+      <nav aria-labelledby="footer-about" appReveal="240">
         <h2 class="col-title" id="footer-about">About BKG</h2>
         <ul class="plain links">
           @for (link of quickLinks; track link.href) { <li><a [href]="link.href">{{ link.label }}</a></li> }
         </ul>
       </nav>
 
-      <nav aria-labelledby="footer-admissions">
+      <nav aria-labelledby="footer-admissions" appReveal="360" revealFrom="right">
         <h2 class="col-title" id="footer-admissions">Admissions</h2>
         <ul class="plain links">
           @for (link of admissionLinks; track link.href) { <li><a [href]="link.href">{{ link.label }}</a></li> }
@@ -38,7 +39,7 @@
       </nav>
     </div>
 
-    <section class="notice" aria-labelledby="notice-title">
+    <section class="notice" aria-labelledby="notice-title" appReveal="200" revealFrom="zoom">
       <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
         <path d="M12 2.5l8 3v6c0 5-3.5 8.6-8 10-4.5-1.4-8-5-8-10v-6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
         <path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

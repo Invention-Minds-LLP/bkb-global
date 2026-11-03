@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Particles } from '../shared/particles';
+import { RevealDirective } from '../shared/reveal.directive';
 
 const OLD_SITE = 'https://bkgglobalschool.com';
 
@@ -21,6 +23,7 @@ const ADMISSION_LINKS = [
 
 @Component({
   selector: 'app-site-footer',
+  imports: [Particles, RevealDirective],
   templateUrl: './site-footer.html',
   styleUrl: './site-footer.css',
 })

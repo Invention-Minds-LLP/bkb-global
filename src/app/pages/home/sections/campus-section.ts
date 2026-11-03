@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
+import { Particles } from '../../../shared/particles';
 import { RevealDirective } from '../../../shared/reveal.directive';
 
 @Component({
   selector: 'app-campus-section',
-  imports: [RevealDirective],
+  imports: [RevealDirective, Particles],
   template: `
     <section class="campus" id="campus" aria-labelledby="campus-title">
       <img class="bg" src="images/bkg/sandur.jpg" width="1024" height="682" loading="lazy"
         alt="Green hills and red rock rising above a lake near Sandur" />
       <div class="shade" aria-hidden="true"></div>
-      <div class="wrap inner" appReveal>
+      <app-particles [density]="1.1" [opacity]="0.65" />
+      <div class="wrap inner" appReveal revealFrom="left">
         <blockquote class="gandhi">
           <p>“See Sandur in September.”</p>
           <cite>Mahatma Gandhi</cite>
@@ -31,7 +33,7 @@ import { RevealDirective } from '../../../shared/reveal.directive';
     .campus {
       position: relative;
       overflow: hidden;
-      padding: clamp(96px, 12vw, 168px) var(--gutter);
+      padding: clamp(72px, 9vw, 128px) var(--gutter);
       background: var(--navy-deep);
       color: var(--white);
     }

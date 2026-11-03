@@ -23,7 +23,7 @@ const LINKS = [
   template: `
     <section class="parents" id="parents" aria-labelledby="parents-title">
       <div class="wrap grid">
-        <div appReveal>
+        <div appReveal revealFrom="left">
           <h2 class="section-title" id="parents-title">For BKG parents</h2>
           <dl class="timings">
             @for (t of timings; track t.who) {
@@ -34,9 +34,9 @@ const LINKS = [
             }
           </dl>
         </div>
-        <nav class="links" appReveal="120" aria-label="Parent resources">
-          @for (l of links; track l.href) {
-            <a [href]="l.href">
+        <nav class="links" aria-label="Parent resources">
+          @for (l of links; track l.href; let i = $index) {
+            <a [href]="l.href" appReveal="{{ i * 110 }}" revealFrom="right">
               {{ l.label }}
               <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -53,7 +53,7 @@ const LINKS = [
     .timings div { padding: 18px 0; border-top: 1px solid #c6cee2; }
     .timings dt { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--navy-deep); }
     .timings dd { margin: 4px 0 0; color: var(--ink-soft); }
-    .timings dd span { display: block; font-size: 14px; color: var(--gold-deep); font-weight: 600; }
+    .timings dd span { display: block; font-size: 14px; color: var(--gold-text); font-weight: 600; }
     .links { display: grid; gap: 10px; }
     .links a {
       display: flex;

@@ -283,7 +283,7 @@
 }
 .chairman-words .role {
   font-size: 14px;
-  color: var(--gold-deep);
+  color: var(--gold-text);
   font-weight: 600;
 }
 .chairman-words .btn {
@@ -357,7 +357,7 @@
   font-weight: 500;
   font-style: italic;
   line-height: 1;
-  color: var(--gold);
+  color: var(--gold-deep);
 }
 .stage h3 {
   margin-top: var(--space-3);

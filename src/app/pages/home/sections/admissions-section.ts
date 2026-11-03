@@ -16,13 +16,13 @@ const STEPS = [
   template: `
     <section class="admissions" id="admissions" aria-labelledby="admissions-title">
       <div class="wrap grid">
-        <div appReveal>
+        <div appReveal revealFrom="left">
           <h2 class="section-title" id="admissions-title">Admissions 2026–27</h2>
           <p class="section-lede">BKG admits students from Pre-KG to Class IX on the basis of the entrance examination
             and an interview.</p>
           <ol class="steps">
             @for (s of steps; track s.title; let i = $index) {
-              <li>
+              <li appReveal="{{ 150 + i * 120 }}" revealFrom="left">
                 <span class="num" aria-hidden="true">0{{ i + 1 }}</span>
                 <div><h3>{{ s.title }}</h3><p>{{ s.text }}</p></div>
               </li>
@@ -34,7 +34,7 @@ const STEPS = [
           </div>
         </div>
 
-        <aside class="form-card gold-cap" appReveal="150" aria-labelledby="visit-title">
+        <aside class="form-card gold-cap" appReveal="200" revealFrom="right" aria-labelledby="visit-title">
           <h3 id="visit-title">Plan a campus visit</h3>
           <p>See the campus, meet the teachers and ask about residential life.</p>
           <app-visit-form idPrefix="visit" [stages]="stages()" />

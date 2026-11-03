@@ -17,28 +17,28 @@ const CARE = [
   template: `
     <section class="life" id="life" aria-labelledby="life-title">
       <div class="wrap">
-        <h2 class="section-title" id="life-title">Life at BKG</h2>
-        <p class="section-lede">Good pastoral care is central to every child’s intellectual, spiritual and emotional
+        <h2 class="section-title" id="life-title" appReveal revealFrom="left">Life at BKG</h2>
+        <p class="section-lede" appReveal="120" revealFrom="left">Good pastoral care is central to every child’s intellectual, spiritual and emotional
           development. Days are full: lessons, labs, arts, sport and tradition.</p>
 
         <div class="mosaic">
-          <figure class="tile big" appReveal>
+          <figure class="tile big" appReveal revealFrom="left">
             <img src="images/bkg/agnihotram.jpg" width="1024" height="684" loading="lazy"
               alt="BKG students seated around a copper vessel during the Agnihotram ceremony" />
             <figcaption><strong>Spiritual roots</strong> Agnihotram, Saraswati Vandana, yoga and meditation</figcaption>
           </figure>
-          <figure class="tile" appReveal="100">
+          <figure class="tile" appReveal="100" revealFrom="down">
             <img src="images/bkg/football.jpg" width="1024" height="684" loading="lazy"
               alt="Students playing football on the ground in front of the school building" />
             <figcaption><strong>Sport</strong> Basketball, tennis, swimming and athletics</figcaption>
           </figure>
-          <figure class="tile" appReveal="200">
+          <figure class="tile" appReveal="200" revealFrom="right">
             <img src="images/bkg/art-painting.jpg" width="1024" height="684" loading="lazy"
               alt="A young BKG student painting a large multicoloured umbrella" />
             <figcaption><strong>Arts</strong> Art, craft, music and drama</figcaption>
           </figure>
 
-          <div class="care gold-cap" appReveal="150">
+          <div class="care gold-cap" appReveal="150" revealFrom="zoom">
             <h3>A home away from home</h3>
             <ul>
               @for (item of care; track item) {
