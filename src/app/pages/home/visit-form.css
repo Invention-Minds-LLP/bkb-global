@@ -16,7 +16,7 @@ form {
   align-items: end;
   gap: 14px 12px;
   background: var(--white);
-  border: 2px solid var(--wine);
+  border: 2px solid var(--deep);
   border-radius: 22px;
   padding: 18px;
 }
@@ -31,8 +31,8 @@ form {
 }
 :host(.bar) input[type='text'],
 :host(.bar) select {
-  background-color: var(--blush);
-  border-color: var(--blush);
+  background-color: var(--mist);
+  border-color: var(--mist);
 }
 :host(.bar) select {
   background-position: right 12px center;
@@ -72,7 +72,7 @@ label,
 legend {
   font-size: 13px;
   font-weight: 700;
-  color: var(--burgundy);
+  color: var(--navy);
   padding: 0;
 }
 
@@ -83,17 +83,17 @@ select {
   font-size: 17px;
   color: var(--ink);
   background: var(--white);
-  border: 2px solid var(--rose);
+  border: 2px solid var(--sky);
   border-radius: 12px;
   padding: 10px 14px;
   min-height: 48px;
-  caret-color: var(--burgundy);
+  caret-color: var(--navy);
   appearance: none;
   transition: border-color 160ms var(--ease-out), background-color 160ms var(--ease-out);
 }
 
 select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237b1e3a' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231e3a8a' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 36px;
@@ -107,12 +107,12 @@ select {
 
 input[type='text']:hover,
 select:hover {
-  border-color: var(--burgundy);
+  border-color: var(--navy);
 }
 
 input[type='text']:focus-visible,
 select:focus-visible {
-  outline: 3px solid var(--marigold);
+  outline: 3px solid var(--gold);
   outline-offset: 2px;
 }
 
@@ -149,7 +149,7 @@ select:focus-visible {
   align-items: center;
   min-height: 44px;
   padding: 0 18px;
-  border: 2px solid var(--rose);
+  border: 2px solid var(--sky);
   border-radius: 999px;
   font-size: 15px;
   font-weight: 600;
@@ -157,15 +157,15 @@ select:focus-visible {
   transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out), color 160ms var(--ease-out);
 }
 .choices label:hover span {
-  border-color: var(--burgundy);
+  border-color: var(--navy);
 }
 .choices input:checked + span {
-  background: var(--burgundy);
-  border-color: var(--burgundy);
-  color: var(--on-burgundy);
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--on-navy);
 }
 .choices input:focus-visible + span {
-  outline: 3px solid var(--marigold);
+  outline: 3px solid var(--gold);
   outline-offset: 2px;
 }
 
@@ -179,8 +179,8 @@ select:focus-visible {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 700;
-  color: var(--on-burgundy);
-  background: var(--burgundy);
+  color: var(--on-navy);
+  background: var(--navy);
   border: 0;
   border-radius: 999px;
   cursor: pointer;
@@ -191,7 +191,7 @@ select:focus-visible {
   transition: transform 220ms var(--ease-spring);
 }
 .submit:hover {
-  background: var(--wine);
+  background: var(--deep);
 }
 .submit:hover svg {
   transform: translateX(4px);
@@ -210,7 +210,7 @@ select:focus-visible {
   align-items: flex-start;
   padding: var(--space-2);
   background: var(--white);
-  border: 2px solid var(--wine);
+  border: 2px solid var(--deep);
   border-radius: 20px;
 }
 .done-mark {
@@ -221,13 +221,13 @@ select:focus-visible {
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 700;
-  color: var(--wine);
+  color: var(--deep);
 }
 .link {
   margin-top: 6px;
   font: inherit;
   font-weight: 700;
-  color: var(--burgundy);
+  color: var(--navy);
   background: none;
   border: 0;
   padding: 0;

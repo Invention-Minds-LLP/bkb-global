@@ -1,13 +1,13 @@
 @if (status() === 'sent') {
   <div class="done" role="status">
     <svg class="done-mark" aria-hidden="true" viewBox="0 0 48 48" width="48" height="48">
-      <circle cx="24" cy="24" r="22" fill="#f2a93b" stroke="#4a0e22" stroke-width="2.5"/>
-      <path d="M14 25l7 7 13-15" fill="none" stroke="#4a0e22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="24" cy="24" r="22" fill="#e5a823" stroke="#0f1b44" stroke-width="2.5"/>
+      <path d="M14 25l7 7 13-15" fill="none" stroke="#0f1b44" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <div>
       <p class="done-lead">Thank you{{ firstName() ? ', ' + firstName() : '' }}. This is a preview.</p>
-      <p>Online booking isn't connected yet, so your details were not sent. Please call admissions on
-        <span class="placeholder">[phone number]</span> to book your visit.</p>
+      <p>Online booking isn't connected yet, so your details were not sent. Please call the school on
+        <a href="tel:+918395260477">08395-260477</a> or <a href="tel:+919482684477">094826 84477</a> to book your visit.</p>
       <button type="button" class="link" (click)="reset()">Start again</button>
     </div>
   </div>

@@ -1,0 +1,33 @@
+<section class="why" aria-labelledby="why-title">
+  <div class="intro">
+    <h2 id="why-title">Why choose BKG?</h2>
+    <p>A stimulating learning environment with truly international standards, within the formal CBSE curriculum.
+      School life is valued for itself, and as a preparation for adulthood.</p>
+  </div>
+
+  <ul class="proof">
+    @for (item of proof; track item.label) {
+      <li>
+        <svg class="icon fig" appDraw aria-hidden="true" viewBox="0 0 64 64" width="64" height="64">
+          <circle class="fill" cx="32" cy="32" r="30"/>
+          @switch (item.icon) {
+            @case ('building') {
+              <path class="d" d="M14 48h36M18 48V28M46 48V28M14 28l18-12 18 12M26 48V36h12v12M32 22v-2" pathLength="1"/>
+            }
+            @case ('field') {
+              <path class="d" d="M12 22h40v24H12zM32 22v24M32 38a4 4 0 1 0 0-8 4 4 0 1 0 0 8M12 28h6v12h-6M52 28h-6v12h6" pathLength="1"/>
+            }
+            @case ('home') {
+              <path class="d" d="M14 30l18-14 18 14M20 26v22h24V26M28 48V38h8v10M40 20v-4h4v8" pathLength="1"/>
+            }
+            @case ('shield') {
+              <path class="d" d="M32 12l16 6v12c0 10-7 17-16 20-9-3-16-10-16-20V18zM25 32l5 5 9-10" pathLength="1"/>
+            }
+          }
+        </svg>
+        <p class="value">{{ item.value }}</p>
+        <p class="label">{{ item.label }}</p>
+      </li>
+    }
+  </ul>
+</section>

@@ -9,66 +9,67 @@ import {
 } from '@angular/core';
 import { DrawDirective } from '../../shared/draw.directive';
 import { StageOption, VisitForm } from './visit-form';
+import { AnnouncementBar } from './sections/announcement-bar';
+import { LifePillars } from './sections/life-pillars';
+import { NewsEvents } from './sections/news-events';
+import { PrincipalMessage } from './sections/principal-message';
+import { WhyChoose } from './sections/why-choose';
 
 type StageArt = 'blocks' | 'book' | 'flask' | 'compass' | 'cap';
 
 interface Stage extends StageOption {
-  ages: string;
   summary: string;
   art: StageArt;
 }
 
-/*
- * Stage names follow the common Indian school structure. The school must
- * confirm its own board, classes and wording; copy is placeholder.
- */
+/* Stages and descriptions come from bkgglobalschool.com (Foundation, Key Stage 1, Key Stage 2 pages). */
 const STAGES: Stage[] = [
-  { id: 'pre-primary', name: 'Pre-Primary', classes: 'Nursery to UKG', ages: 'Ages 3–6', art: 'blocks',
-    summary: 'Letters, numbers and the habit of asking “why?”, learned through structured play.' },
-  { id: 'primary', name: 'Primary', classes: 'Class 1 to 5', ages: 'Ages 6–11', art: 'book',
-    summary: 'Strong reading, writing and mathematics, so every child builds on firm ground.' },
-  { id: 'middle', name: 'Middle School', classes: 'Class 6 to 8', ages: 'Ages 11–14', art: 'flask',
-    summary: 'Science in the lab, languages, social studies and the confidence to explain an answer.' },
-  { id: 'secondary', name: 'Secondary', classes: 'Class 9 and 10', ages: 'Ages 14–16', art: 'compass',
-    summary: 'Board examination years, taught for understanding, with regular practice and feedback.' },
-  { id: 'senior', name: 'Senior Secondary', classes: 'Class 11 and 12', ages: 'Ages 16–18', art: 'cap',
-    summary: 'Science, Commerce and Humanities streams, with guidance for college and careers.' },
+  { id: 'pre-primary', name: 'Pre-Primary', classes: 'Pre-KG, LKG and UKG', art: 'blocks',
+    summary: 'Hands-on discovery in a Montessori lab, story junction, sandpit, science hub and toys museum.' },
+  { id: 'primary', name: 'Primary', classes: 'Class 1 to 5', art: 'book',
+    summary: 'Scientific temper through observation and experiment, and a love of books that lasts a lifetime.' },
+  { id: 'middle', name: 'Middle School', classes: 'Class 6 to 8', art: 'flask',
+    summary: 'Collaborative learning, projects, debates and experiments that build curiosity and confidence.' },
+  { id: 'high', name: 'High School', classes: 'Class 9 and 10', art: 'compass',
+    summary: 'CBSE board years, with the board syllabus taught alongside a competitive-exam approach.' },
 ];
 
+/* BKG-SMILE: the five fundamental principles of the school's curriculum. */
 const PRINCIPLES = [
-  { title: 'Clear teaching', text: 'Every lesson starts with a clear explanation and a worked example before children try it themselves.' },
-  { title: 'Practice that sticks', text: 'Short, regular practice and revision, so ideas are remembered at exam time and after.' },
-  { title: 'Feedback every week', text: 'Teachers check work closely and parents hear how their child is doing, not just at report time.' },
+  { letter: 'S', title: 'Spiritual resilience', text: 'Yoga, meditation, Saraswati Vandana and chanting of slokas bring calm and focus to every day.' },
+  { letter: 'M', title: 'Mental intelligence', text: 'Questioning, enquiry and independent thinking, with a scientific and solution-oriented outlook.' },
+  { letter: 'I', title: 'Infrastructure & facilities', text: 'Smart classrooms, science and English language labs, and a 4.5-acre playing area.' },
+  { letter: 'L', title: 'Laboratory-based teaching', text: 'Experiments, models, research and exploration: children learn by doing.' },
+  { letter: 'E', title: 'Emotional intelligence', text: 'Visual and performing arts, life skills and pastoral care for confident, happy children.' },
 ];
 
-const LIFE = ['Yoga & sport', 'Music & dance', 'Art', 'Debate', 'Science club', 'Assemblies'];
-
+/* The school's published admission procedure. */
 const VISIT_STEPS = [
-  { title: 'Book', text: 'Tell us your child’s stage. It takes a minute.' },
-  { title: 'Visit', text: 'Walk through the school on a normal working day.' },
-  { title: 'Meet', text: 'Sit in a class and meet the teachers.' },
-  { title: 'Apply', text: 'Take the admission form home and apply when ready.' },
+  { title: 'Apply', text: 'Download the application form, fill it in, and pay the application fee online.' },
+  { title: 'Entrance test', text: 'English, Mathematics, Language and Intelligence, for Classes I to IX.' },
+  { title: 'Interview', text: 'The child and parents meet the school, followed by a medical examination.' },
+  { title: 'Admission', text: 'Pay the school fee and collect your child’s kit from the front office.' },
 ];
 
+const OLD_SITE = 'https://bkgglobalschool.com';
 const PARENT_LINKS = [
-  { label: 'Calendar & holidays', href: '#' },
-  { label: 'Circulars', href: '#' },
-  { label: 'Parent portal', href: '#' },
-  { label: 'Fees', href: '#' },
-  { label: 'Transport', href: '#' },
-  { label: 'Contact the office', href: '#contact' },
+  { label: 'Fee structure', href: `${OLD_SITE}/fees-structure/` },
+  { label: 'Admission procedure', href: `${OLD_SITE}/admissions/` },
+  { label: 'Front office', href: `${OLD_SITE}/front-office/` },
+  { label: 'BKG Happenings', href: `${OLD_SITE}/bkg_happenings/` },
+  { label: 'Blog', href: `${OLD_SITE}/blog/` },
+  { label: 'Mandatory disclosure', href: `${OLD_SITE}/mandatory-public-disclosure/` },
 ];
 
 @Component({
   selector: 'app-home',
-  imports: [DrawDirective, VisitForm],
+  imports: [DrawDirective, VisitForm, AnnouncementBar, WhyChoose, PrincipalMessage, LifePillars, NewsEvents],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class HomePage {
   protected readonly stages = STAGES;
   protected readonly principles = PRINCIPLES;
-  protected readonly life = LIFE;
   protected readonly visitSteps = VISIT_STEPS;
   protected readonly parentLinks = PARENT_LINKS;
   protected readonly year = new Date().getFullYear();

@@ -2,7 +2,7 @@
 version: 1
 slug: "src-app-pages-home-home-ts"
 primary_target: "src/app/pages/home/home.ts"
-related_targets: []
+related_targets: ["src/app/pages/home/sections/why-choose.ts","src/app/pages/home/sections/news-events.ts"]
 ---
 
 # Homepage
@@ -24,6 +24,9 @@ FIRST VIEWPORT: Left: headline "Curious minds. Serious learning.", lede, horizon
 FORM: User-pinned direction "Illustrated & lively, burgundy & white, Indian stock photos", replacing roll seed:33ceba9beb834f11. Signature interaction: a hand-drawn dotted path draws itself down the journey section as you scroll, and each stage's illustration comes alive when the path reaches it. Motion grammar: lines draw, illustrations idle gently; everything static under reduced motion.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+## Reference content structure (added 2026-11-03)
+The school shared Indian heritage-school references (Doon, Mayo, Scindia, Welham Girls, Rishi Valley, Sanawar, Woodstock, Bishop Cotton). User chose to keep this visual world and adopt Doon's content structure: announcements ticker with parent/student login and fee payment, Why choose (four proof figures, placeholders until verified), Principal's message, Life at BKB in five pillars (Academics, Pastoral care, Activities & outdoors, Sports, Service), News & events with Achievements, affiliation logos, and a fraud-warning disclaimer naming official channels. Section order: ticker, masthead, hero, statement, why choose, journey, teaching, principal, life, news, visit, parents, footer.
 
 ## Open decisions
 City, board/curriculum (CBSE, ICSE, IB, Cambridge, state), class range, differentiators, real photos, logo, visit-booking backend.
