@@ -43,7 +43,8 @@ A CBSE day and residential school for boys and girls in a rural setting that off
 
 - Name: **BKG Global School** (not "BKB"). Motto: "Sujnana Samriddhi Sukshema". Tagline on the old site: "Where the learning begins".
 - Logo: gold scroll crest around a Sri Yantra with "BKG Global School, Sandur" in a royal-blue serif (`public/images/bkg/logo.png`).
-- Colours (user-confirmed 2026-11-03): the school's own navy and royal blue (logo, blazers), crest gold, and a touch of tie red, in an illustrated, lively style that is never childish, corporate or stiff.
+- Colours (user-confirmed 2026-11-03): the school's own navy (logo, blazers) and crest gold.
+- Style (client-confirmed 2026-11-03): **professional, in the manner of Bishop Cotton School's website**: photo-led, serif headings, quiet motion, **no illustrations**. The earlier illustrated, lively version was rejected as not professional.
 - People: founder Sri B. Kumara Gouda (1924–2009); chairman and managing trustee Sri B. Rudra Gouda; founder Smt. B. Kamalamma; trustees Sri B. Naganagouda and Sri B. K. Basavaraj.
 
 ## Evidence on Hand

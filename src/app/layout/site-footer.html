@@ -1,0 +1,60 @@
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div class="brand">
+        <div class="logo-plate">
+          <img src="images/bkg/logo.png" width="853" height="462" alt="BKG Global School, Sandur" loading="lazy" />
+        </div>
+        <p class="motto">Sujnana · Samriddhi · Sukshema</p>
+        <p class="about">A CBSE day and residential school for boys and girls in Sandur, Karnataka. A BKG Group institution.</p>
+      </div>
+
+      <div>
+        <h2 class="col-title">Contact</h2>
+        <address>
+          Ballari Road, Krishnanagar<br />
+          Sandur, Ballari District<br />
+          Karnataka 583119
+        </address>
+        <ul class="plain">
+          <li><a href="tel:+918395260477">08395-260477</a></li>
+          <li><a href="tel:+919482684477">094826 84477</a></li>
+          <li><a href="mailto:info@bkgglobalschool.com">info&#64;bkgglobalschool.com</a></li>
+        </ul>
+      </div>
+
+      <nav aria-labelledby="footer-about">
+        <h2 class="col-title" id="footer-about">About BKG</h2>
+        <ul class="plain links">
+          @for (link of quickLinks; track link.href) { <li><a [href]="link.href">{{ link.label }}</a></li> }
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-admissions">
+        <h2 class="col-title" id="footer-admissions">Admissions</h2>
+        <ul class="plain links">
+          @for (link of admissionLinks; track link.href) { <li><a [href]="link.href">{{ link.label }}</a></li> }
+        </ul>
+      </nav>
+    </div>
+
+    <section class="notice" aria-labelledby="notice-title">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+        <path d="M12 2.5l8 3v6c0 5-3.5 8.6-8 10-4.5-1.4-8-5-8-10v-6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h2 id="notice-title">Pay the school directly, and only the school</h2>
+        <p>The application fee is paid online only. School fees are paid at the accounts office (9:00 am – 4:00 pm) or into
+          the “BKG Global School” bank account; hostel fees and caution deposit into the “BKG Foundation” account, as listed
+          on the fee structure page. The school does not collect fees through agents or other websites. If in doubt, call
+          08395-260477 before you pay.</p>
+      </div>
+    </section>
+
+    <div class="bottom">
+      <p>© {{ year }} BKG Global School, Sandur. All rights reserved.</p>
+      <p>CBSE Affiliation No. 830975</p>
+    </div>
+  </div>
+</footer>

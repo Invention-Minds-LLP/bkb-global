@@ -1,319 +1,151 @@
-<a class="skip" href="#visit">Skip to booking a visit</a>
+<a class="skip" href="#enquiry">Skip to admission enquiry</a>
 
-<app-announcement-bar />
-
-<header class="masthead">
-  <a class="wordmark" href="/" aria-label="BKG Global School, Sandur: home">
-    <img src="images/bkg/logo.png" width="853" height="462" alt="BKG Global School, Sandur" />
-  </a>
-
-  <button class="menu-toggle" type="button" (click)="toggleMenu()"
-    [attr.aria-expanded]="menuOpen()" aria-controls="site-nav">
-    <span class="visually-hidden">Menu</span>
-    <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
-      @if (menuOpen()) {
-        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      } @else {
-        <path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      }
-    </svg>
-  </button>
-
-  <nav id="site-nav" class="nav" [class.open]="menuOpen()" aria-label="Main">
-    <ul>
-      <li><a href="#about" (click)="closeMenu()">About</a></li>
-      <li><a href="#journey" (click)="closeMenu()">Academics</a></li>
-      <li><a href="#life" (click)="closeMenu()">Life at BKG</a></li>
-      <li><a href="#campus" (click)="closeMenu()">Campus</a></li>
-      <li><a href="#news" (click)="closeMenu()">Happenings</a></li>
-      <li><a href="#admissions" (click)="closeMenu()">Admissions</a></li>
-      <li class="parents-link"><a href="#families" (click)="closeMenu()">Parents</a></li>
-    </ul>
-    <a class="nav-cta" href="#visit" (click)="closeMenu()">Book a visit</a>
-  </nav>
-</header>
+<app-site-header />
 
 <main>
-  <!-- First viewport -->
+  <!-- Hero -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
-      <h1 id="hero-title">Curious minds.<br /><span class="hl">Serious learning.
-        <svg class="fig hero-scribble" appDraw aria-hidden="true" viewBox="0 0 400 30" preserveAspectRatio="none">
-          <path class="d" d="M6 20 C 80 8, 150 26, 230 14 S 360 10, 394 18" pathLength="1"/>
-        </svg>
-        <svg class="pencil" aria-hidden="true" viewBox="0 0 64 64" width="64" height="64">
-          <g transform="rotate(35 32 32)">
-            <rect x="24" y="2" width="16" height="44" rx="3" fill="#e5a823" stroke="#0f1b44" stroke-width="2.5"/>
-            <rect x="24" y="2" width="16" height="9" rx="3" fill="#c9d6f2" stroke="#0f1b44" stroke-width="2.5"/>
-            <path d="M24 46 L32 62 L40 46 Z" fill="#fff" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M29.5 57 L32 62 L34.5 57 Z" fill="#0f1b44"/>
-          </g>
-        </svg></span></h1>
-      <p class="lede">
-        A CBSE day and residential school for boys and girls in Sandur, Karnataka, from Pre-KG to Class X.
-        We believe in reaching the mind through the heart.
-      </p>
-      <app-visit-form id="visit-top" layout="bar" idPrefix="hero" [stages]="stages" />
-    </div>
+    <img class="hero-bg" src="images/bkg/science-lab.jpg" width="1536" height="1025" alt="" fetchpriority="high" />
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <h1 id="hero-title">Where the <em>learning</em> begins</h1>
+        <p class="hero-lede">A CBSE day and residential school for boys and girls in Sandur, Karnataka, offering truly
+          international standards within the CBSE curriculum, from Pre-KG to Class X.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#enquiry">
+            Book a campus visit
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-outline-light" href="#about">Discover BKG</a>
+        </div>
+      </div>
 
-    <div class="hero-art">
-      <img class="hero-photo" src="images/bkg/science-lab.jpg" width="1536" height="1025"
-        alt="Two BKG students in navy blazers studying a sample with a magnifying glass in the science lab" fetchpriority="high" />
-
-      <svg class="plane-path" aria-hidden="true" viewBox="0 0 400 260">
-        <path d="M20 230 C 80 120, 160 260, 220 150 S 360 40, 380 30" fill="none" stroke="#1e3a8a"
-          stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/>
-      </svg>
-      <svg class="plane" aria-hidden="true" viewBox="0 0 60 44" width="60" height="44">
-        <path d="M2 22 L58 2 L40 42 L28 28 Z" fill="#fff" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-        <path d="M58 2 L28 28 L24 40" fill="none" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-      </svg>
-
-      <svg class="atom" aria-hidden="true" viewBox="0 0 120 120" width="120" height="120">
-        <circle cx="60" cy="60" r="56" fill="#eef2fb" stroke="#0f1b44" stroke-width="2.5"/>
-        <g class="orbits" fill="none" stroke="#1e3a8a" stroke-width="2.5">
-          <ellipse cx="60" cy="60" rx="38" ry="14"/>
-          <ellipse cx="60" cy="60" rx="38" ry="14" transform="rotate(60 60 60)"/>
-          <ellipse cx="60" cy="60" rx="38" ry="14" transform="rotate(120 60 60)"/>
-        </g>
-        <circle cx="60" cy="60" r="8" fill="#e5a823" stroke="#0f1b44" stroke-width="2.5"/>
-        <g class="electron"><circle cx="98" cy="60" r="5" fill="#1e3a8a"/></g>
-      </svg>
-
-      <svg class="books" aria-hidden="true" viewBox="0 0 150 110" width="150" height="110">
-        <rect x="10" y="74" width="130" height="26" rx="5" fill="#1e3a8a" stroke="#0f1b44" stroke-width="2.5"/>
-        <rect x="20" y="48" width="112" height="26" rx="5" fill="#e5a823" stroke="#0f1b44" stroke-width="2.5"/>
-        <rect x="6" y="22" width="120" height="26" rx="5" fill="#c9d6f2" stroke="#0f1b44" stroke-width="2.5"/>
-        <path d="M24 30h70M34 56h60M24 82h90" stroke="#0f1b44" stroke-width="2" stroke-linecap="round" opacity=".5"/>
-        <g class="apple">
-          <path d="M98 22c-10-14 14-20 16-6 2-14 26-8 16 6-6 10-14 8-16 6-2 2-10 4-16-6z" fill="#b3122e" stroke="#0f1b44" stroke-width="2.5"/>
-          <path d="M114 10c0-4 3-8 7-9" fill="none" stroke="#0f1b44" stroke-width="2.5" stroke-linecap="round"/>
-        </g>
-      </svg>
-
-      <svg class="flower" aria-hidden="true" viewBox="0 0 100 100" width="96" height="96">
-        <g class="petals" fill="#e5a823" stroke="#0f1b44" stroke-width="2.5">
-          <ellipse cx="50" cy="22" rx="12" ry="18"/>
-          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(45 50 50)"/>
-          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(90 50 50)"/>
-          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(135 50 50)"/>
-          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(180 50 50)"/>
-          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(225 50 50)"/>
-          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(270 50 50)"/>
-          <ellipse cx="50" cy="22" rx="12" ry="18" transform="rotate(315 50 50)"/>
-        </g>
-        <circle cx="50" cy="50" r="13" fill="#1e3a8a" stroke="#0f1b44" stroke-width="2.5"/>
-      </svg>
-
+      <aside class="hero-card gold-cap" id="enquiry" aria-labelledby="enquiry-title">
+        <h2 id="enquiry-title">Admission enquiry</h2>
+        <p class="card-lede">Admissions are open for 2026–27. Leave your details and the office will call you back.</p>
+        <app-visit-form layout="compact" idPrefix="hero" [stages]="stages" />
+      </aside>
     </div>
   </section>
 
-  <!-- Statement with inline photos -->
-  <section class="statement" aria-label="Our approach">
-    <p>
-      Every day, our students
-      <span class="pill"><img src="images/bkg/computer-lab.jpg" alt="" width="1024" height="683" loading="lazy" /></span>
-      read, question, write and
-      <span class="pill"><img src="images/bkg/art-painting.jpg" alt="" width="1024" height="684" loading="lazy" /></span>
-      practise until ideas <span class="scribble">stick for good.
-        <svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none" appDraw class="fig">
-          <path class="d" d="M4 16 C 60 6, 120 22, 180 10 S 270 8, 296 14" pathLength="1"/>
-        </svg></span>
-    </p>
-  </section>
-
-  <app-why-choose id="why" />
-
-  <!-- Signature: the journey -->
-  <section id="journey" class="journey" #journey aria-labelledby="journey-title">
-    <div class="section-head">
-      <h2 id="journey-title">One school, from Pre-KG to Class X.</h2>
-      <p>Each stage builds on the last, within a creative and insightful CBSE curriculum that prepares children for the
-        21st century.</p>
+  <!-- Admissions strip -->
+  <div class="strip">
+    <div class="wrap strip-row">
+      <p><strong>Admissions open for academic year 2026–27</strong><span class="dot" aria-hidden="true"></span>Pre-KG to Class IX</p>
+      <a href="#admissions">See the admission process
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
+  </div>
 
-    <div class="route">
-      <svg class="route-line" aria-hidden="true" [attr.viewBox]="routeBox()">
-        <path class="route-dots" [attr.d]="routePath()"/>
-        <path class="route-ink" [attr.d]="routePath()" pathLength="1"/>
-      </svg>
-
-      <ol class="stages">
-        @for (s of stages; track s.id; let i = $index) {
-          <li class="stage" data-stage [class.awake]="i <= reached()" [class.flip]="i % 2 === 1">
-            <div class="stage-art" aria-hidden="true">
-              @switch (s.art) {
-                @case ('blocks') {
-                  <svg viewBox="0 0 160 140">
-                    <rect class="b1" x="20" y="84" width="52" height="48" rx="6" fill="#1e3a8a" stroke="#0f1b44" stroke-width="2.5"/>
-                    <rect class="b2" x="78" y="84" width="52" height="48" rx="6" fill="#c9d6f2" stroke="#0f1b44" stroke-width="2.5"/>
-                    <rect class="b3" x="48" y="30" width="52" height="48" rx="6" fill="#e5a823" stroke="#0f1b44" stroke-width="2.5"/>
-                    <circle cx="46" cy="108" r="8" fill="#fff"/><path d="M96 98l8 20 8-20" fill="none" stroke="#0f1b44" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M64 54h20M74 44v20" stroke="#0f1b44" stroke-width="3" stroke-linecap="round"/>
-                  </svg>
-                }
-                @case ('book') {
-                  <svg viewBox="0 0 160 140">
-                    <path d="M14 40c22-10 44-10 66 4 22-14 44-14 66-4v80c-22-10-44-10-66 4-22-14-44-14-66-4z" fill="#fff" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-                    <path d="M80 44v80" stroke="#0f1b44" stroke-width="2.5"/>
-                    <path d="M28 60h38M28 74h38M28 88h30M94 60h38M94 74h38M94 88h30" stroke="#c9d6f2" stroke-width="4" stroke-linecap="round"/>
-                    <path class="page" d="M80 44c18-12 36-14 54-8v80c-18-6-36-4-54 8z" fill="#eef2fb" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-                    <circle cx="140" cy="24" r="10" fill="#e5a823" stroke="#0f1b44" stroke-width="2.5"/>
-                  </svg>
-                }
-                @case ('flask') {
-                  <svg viewBox="0 0 160 140">
-                    <path d="M62 14h36M68 14v40l-36 62c-4 8 2 16 10 16h76c8 0 14-8 10-16L92 54V14" fill="#fff" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-                    <path d="M46 92h68l14 24c3 6-1 12-8 12H40c-7 0-11-6-8-12z" fill="#1e3a8a"/>
-                    <circle class="bub bub1" cx="66" cy="104" r="6" fill="#c9d6f2"/>
-                    <circle class="bub bub2" cx="86" cy="110" r="4" fill="#e5a823"/>
-                    <circle class="bub bub3" cx="100" cy="100" r="5" fill="#fff"/>
-                  </svg>
-                }
-                @case ('compass') {
-                  <svg viewBox="0 0 160 140">
-                    <path class="arc" d="M30 124 A 56 56 0 0 1 130 124" fill="none" stroke="#e5a823" stroke-width="4" stroke-linecap="round" pathLength="1"/>
-                    <g class="legs">
-                      <circle cx="80" cy="22" r="9" fill="#1e3a8a" stroke="#0f1b44" stroke-width="2.5"/>
-                      <path d="M80 30 L52 124" stroke="#0f1b44" stroke-width="5" stroke-linecap="round"/>
-                      <path d="M80 30 L108 124" stroke="#1e3a8a" stroke-width="5" stroke-linecap="round"/>
-                      <path d="M62 90h36" stroke="#0f1b44" stroke-width="2.5"/>
-                    </g>
-                  </svg>
-                }
-                @case ('cap') {
-                  <svg viewBox="0 0 160 140">
-                    <path d="M44 66v28c0 12 72 12 72 0V66" fill="#1e3a8a" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-                    <path d="M80 30 L150 58 L80 86 L10 58 Z" fill="#0f1b44" stroke="#0f1b44" stroke-width="2.5" stroke-linejoin="round"/>
-                    <g class="tassel"><path d="M80 58 L128 70 V104" fill="none" stroke="#e5a823" stroke-width="3.5" stroke-linecap="round"/>
-                      <rect x="122" y="100" width="12" height="18" rx="4" fill="#e5a823" stroke="#0f1b44" stroke-width="2"/></g>
-                    <path class="spark" d="M30 22l4 8 8 4-8 4-4 8-4-8-8-4 8-4z" fill="#e5a823"/>
-                  </svg>
-                }
-              }
-            </div>
-            <div class="stage-text">
-              <h3>{{ s.name }}</h3>
-              <p class="stage-meta">{{ s.classes }}</p>
-              <p>{{ s.summary }}</p>
-            </div>
-          </li>
-        }
-      </ol>
-    </div>
-  </section>
-
-  <!-- How we teach: the BKG-SMILE framework -->
-  <section id="teaching" class="teaching" aria-labelledby="teaching-title">
-    <figure class="teaching-photo">
-      <img src="images/bkg/agnihotram.jpg" width="1024" height="684" loading="lazy"
-        alt="BKG students seated around a copper vessel during the Agnihotram ceremony" />
-      <figcaption class="photo-note">Agnihotram at BKG: tradition is part of the school day.</figcaption>
-    </figure>
-    <div class="teaching-copy">
-      <h2 id="teaching-title">The BKG-SMILE way of education</h2>
-      <p class="teaching-lede">Five principles shape how every child learns at BKG.</p>
-      <ol class="principles smile">
-        @for (p of principles; track p.title) {
-          <li>
-            <span class="smile-letter" aria-hidden="true">{{ p.letter }}</span>
-            <div><h3>{{ p.title }}</h3><p>{{ p.text }}</p></div>
-          </li>
-        }
-      </ol>
-    </div>
-  </section>
-
-  <app-principal-message id="about" />
-
-  <app-life-pillars id="life" />
-
-  <!-- Sandur & campus -->
-  <section id="campus" class="campus" aria-labelledby="campus-title">
-    <div class="campus-frame">
-      <img src="images/bkg/sandur.jpg" width="1024" height="682" loading="lazy"
-        alt="Green hills and red rock rising above a lake near Sandur" />
-      <div class="campus-card">
-        <blockquote class="gandhi">“See Sandur in September.” <cite>Mahatma Gandhi</cite></blockquote>
-        <h2 id="campus-title">A 17-acre campus in the Ooty of Karnataka</h2>
-        <p>Sandur sits among green hills, valleys and gorges, close to Hampi, a World Heritage Site. Its cool, pleasant
-          climate makes it a calm place to learn.</p>
-        <ul class="campus-facts">
-          <li>Jindal Airport, 17 km</li>
-          <li>Toranagallu station, 23 km</li>
-          <li>Hosapete station, 28 km</li>
-        </ul>
+  <!-- Welcome -->
+  <section class="welcome" id="about" aria-labelledby="welcome-title">
+    <div class="wrap welcome-grid">
+      <div class="welcome-copy" appReveal>
+        <h2 class="section-title" id="welcome-title">Welcome to BKG Global School</h2>
+        <p class="section-lede">BKG Global School aims to provide a stimulating learning environment with truly
+          international standards within the formal CBSE curriculum. We believe school life should be valued for itself,
+          and as a preparation for adulthood.</p>
+        <p class="body">Our students learn from experienced, dedicated and caring faculty who understand learners and guide
+          them to excel. Teaching is child-centred and imaginative, and the curriculum blends scholastic and co-scholastic
+          learning, so children are ready for the 21st century.</p>
+        <blockquote class="pull">“We believe in reaching the mind through the heart.”</blockquote>
+      </div>
+      <div class="welcome-media" appReveal="150">
+        <img class="m1" src="images/bkg/computer-lab.jpg" width="1024" height="683" loading="lazy"
+          alt="BKG students with headsets working at computers in the computer lab" />
+        <img class="m2" src="images/bkg/art-painting.jpg" width="1024" height="684" loading="lazy"
+          alt="A young BKG student painting a large multicoloured umbrella in the art room" />
       </div>
     </div>
   </section>
 
-  <app-news-events id="news" />
-
-  <!-- Visit -->
-  <section id="admissions" class="visit" aria-labelledby="visit-title">
-    <div class="visit-copy">
-      <h2 id="visit-title">Admissions open for 2026–27</h2>
-      <p class="visit-lede">BKG admits students from Pre-KG to Class IX. Here is how admission works.</p>
-      <ol class="steps">
-        @for (step of visitSteps; track step.title; let i = $index) {
-          <li><span class="step-n">{{ i + 1 }}</span><div><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div></li>
-        }
-      </ol>
-      <p class="call">Prefer to talk? Call <a href="tel:+918395260477">08395-260477</a> or
-        <a href="tel:+919482684477">094826 84477</a>.</p>
-    </div>
-    <div id="visit" class="visit-panel">
-      <h3 class="panel-title">Book a visit</h3>
-      <app-visit-form idPrefix="visit" [stages]="stages" />
-    </div>
-  </section>
-
-  <!-- Current families -->
-  <section id="families" class="families" aria-labelledby="families-title">
-    <div>
-      <h2 id="families-title">For BKG parents</h2>
-      <dl class="timings">
-        <div><dt>Pre-primary (Pre-KG, LKG, UKG)</dt><dd>Mon–Fri, 8:30 am – 12:30 pm. All Saturdays off.</dd></div>
-        <div><dt>Class 1 onwards</dt><dd>Mon–Fri, 8:30 am – 3:30 pm. Sat, 8:30 am – 12:30 pm. Second Saturdays off.</dd></div>
-        <div><dt>Accounts office (fees)</dt><dd>9:00 am – 4:00 pm</dd></div>
-      </dl>
-    </div>
-    <ul>
-      @for (link of parentLinks; track link.label) {
-        <li><a [href]="link.href">{{ link.label }}
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a></li>
+  <!-- Figures -->
+  <section class="figures" aria-label="BKG at a glance">
+    <ul class="wrap figures-row">
+      @for (f of figures; track f.label; let i = $index) {
+        <li appReveal="{{ i * 100 }}">
+          <p class="figure-value"><span [appCountUp]="f.value">{{ f.value }}</span>{{ f.suffix }}<small>{{ f.unit }}</small></p>
+          <p class="figure-label">{{ f.label }}</p>
+        </li>
       }
     </ul>
   </section>
-</main>
 
-<footer id="contact" class="footer">
-  <div class="footer-top">
-    <div>
-      <p class="footer-mark">BKG <b>Global School</b></p>
-      <p class="motto">Sujnana · Samriddhi · Sukshema</p>
-    </div>
-    <a class="footer-cta" href="#visit">Book a visit</a>
-  </div>
-  <dl class="facts">
-    <div><dt>Address</dt><dd>Ballari Road, Krishnanagar<br />Sandur, Ballari District<br />Karnataka 583119</dd></div>
-    <div><dt>Phone</dt><dd><a href="tel:+918395260477">08395-260477</a><br /><a href="tel:+919482684477">094826 84477</a></dd></div>
-    <div><dt>Email</dt><dd><a href="mailto:info@bkgglobalschool.com">info&#64;bkgglobalschool.com</a></dd></div>
-    <div><dt>Affiliation</dt><dd>CBSE Affiliation No. 830975<br /><a href="https://bkgglobalschool.com/mandatory-public-disclosure/">Mandatory public disclosure</a></dd></div>
-  </dl>
-  <section class="disclaimer" aria-labelledby="disclaimer-title">
-    <svg aria-hidden="true" viewBox="0 0 32 32" width="28" height="28">
-      <path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z" fill="#1e3a8a" stroke="#d9e1f5" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M11 16l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <div>
-      <h2 id="disclaimer-title">Pay the school directly, and only the school</h2>
-      <p>BKG Global School takes the application fee online only, and school fees at the accounts office (9 am – 4 pm) or into the
-        school’s own bank accounts listed on the fees page. School fees go to the “BKG Global School” account and hostel
-        fees to the “BKG Foundation” account. The school does not collect fees through agents or other websites. If in
-        doubt, call 08395-260477 before you pay.</p>
+  <!-- Chairman -->
+  <section class="chairman" aria-labelledby="chairman-title">
+    <div class="wrap chairman-grid">
+      <figure class="chairman-photo" appReveal>
+        <img src="images/bkg/chairman.jpg" width="540" height="720" loading="lazy"
+          alt="Sri B. Rudra Gouda, Chairman and Managing Trustee of BKG Global School" />
+      </figure>
+      <div class="chairman-words" appReveal="150">
+        <h2 class="section-title" id="chairman-title">From the Chairman’s desk</h2>
+        <blockquote>
+          <p class="quote">“Intelligence is not enough. Intelligence with character and action is the goal of true
+            education.”</p>
+          <p class="body">Our institution aims at grooming each child academically, socially and spiritually, so that they
+            become confident and well-balanced citizens of the world. We take pride in being pioneers in bringing digital
+            learning to rural areas.</p>
+          <footer>
+            <span class="name">Sri B. Rudra Gouda</span>
+            <span class="role">Chairman &amp; Managing Trustee</span>
+          </footer>
+        </blockquote>
+        <a class="btn btn-outline" href="https://bkgglobalschool.com/chairmans-message/">Read the full message</a>
+
+        <div class="founder">
+          <img src="images/bkg/founder.jpg" width="350" height="450" loading="lazy"
+            alt="Sri B. Kumara Gouda, founder of the BKG Group" />
+          <p><strong>Sri B. Kumara Gouda</strong> (1924–2009), Founder, BKG Group.<br />
+            <em>“The best teachers of humanity are the lives of great men.” Walking in your footsteps.</em></p>
+        </div>
+      </div>
     </div>
   </section>
-  <p class="imprint">© {{ year }} BKG Global School, Sandur. A BKG Group institution.</p>
-</footer>
+
+  <!-- Academics -->
+  <section class="academics" id="academics" aria-labelledby="academics-title">
+    <div class="wrap">
+      <h2 class="section-title center" id="academics-title">Academics, from Pre-KG to Class X</h2>
+      <p class="section-lede center">A creative, innovative and insightful CBSE curriculum framework that prepares
+        children for the 21st century, stage by stage.</p>
+      <ol class="stages">
+        @for (s of stages; track s.id; let i = $index) {
+          <li class="stage" appReveal="{{ i * 100 }}">
+            <span class="numeral" aria-hidden="true">{{ s.numeral }}</span>
+            <h3>{{ s.name }}</h3>
+            <p class="classes">{{ s.classes }}</p>
+            <p>{{ s.summary }}</p>
+          </li>
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- SMILE -->
+  <section class="smile" aria-labelledby="smile-title">
+    <div class="wrap">
+      <h2 class="section-title center light" id="smile-title">The BKG-SMILE way of education</h2>
+      <p class="section-lede center light">Five fundamental principles shape how every child learns at BKG.</p>
+      <ul class="smile-grid">
+        @for (p of smile; track p.letter; let i = $index) {
+          <li appReveal="{{ i * 90 }}">
+            <span class="letter" aria-hidden="true">{{ p.letter }}</span>
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.text }}</p>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+
+  <app-life-section />
+  <app-campus-section />
+  <app-happenings-section />
+  <app-admissions-section [stages]="stages" />
+  <app-parents-section />
+</main>
+
+<app-site-footer />

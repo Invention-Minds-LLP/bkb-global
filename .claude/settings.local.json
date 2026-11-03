@@ -1,5 +1,4 @@
 {
-  "description": "Impeccable design detector: immediate-tier checks after Edit/Write on UI files, full-rule deep pass on Stop.",
   "hooks": {
     "SessionStart": [
       {
@@ -37,6 +36,12 @@
           }
         ]
       }
+    ]
+  },
+  "description": "Impeccable design detector: immediate-tier checks after Edit/Write on UI files, full-rule deep pass on Stop.",
+  "permissions": {
+    "allow": [
+      "PowerShell(node \"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--BKB-Global\\\\54c381f9-857f-4074-ae04-0433dd342fa7\\\\scratchpad\\\\shot\\\\parts.mjs\" 1440 \"#about,#academics,#life,#admissions\")"
     ]
   }
 }

@@ -15,13 +15,13 @@ const CONTACT_PATTERN = /^(?:[^\s@]+@[^\s@]+\.[^\s@]+|[+()\d\s-]{7,})$/;
   imports: [ReactiveFormsModule],
   templateUrl: './visit-form.html',
   styleUrl: './visit-form.css',
-  host: { '[class.bar]': "layout() === 'bar'" },
+  host: { '[class.compact]': "layout() === 'compact'" },
 })
 export class VisitForm {
   readonly stages = input.required<StageOption[]>();
   readonly idPrefix = input('visit');
-  /** 'bar' is the compact single-row form in the first viewport; 'full' adds the preferred time. */
-  readonly layout = input<'bar' | 'full'>('full');
+  /** 'compact' is the hero card (no time preference); 'full' adds the preferred time. */
+  readonly layout = input<'compact' | 'full'>('full');
 
   private readonly fb = inject(FormBuilder);
   protected readonly status = signal<'idle' | 'sending' | 'sent'>('idle');
@@ -54,7 +54,7 @@ export class VisitForm {
       return;
     }
     this.status.set('sending');
-    // TODO(backend): send this.form.getRawValue() to the school's booking endpoint.
+    // TODO(backend): send this.form.getRawValue() to the school's enquiry endpoint.
     setTimeout(() => this.status.set('sent'), 700);
   }
 

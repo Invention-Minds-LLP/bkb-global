@@ -49,7 +49,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["@fontsource-variable/bricolage-grotesque/standard.css", "@fontsource-variable/figtree/index.css","src/styles.css"]
+            "styles": ["@fontsource-variable/source-serif-4/standard.css", "@fontsource-variable/source-serif-4/standard-italic.css","@fontsource-variable/figtree/index.css","src/styles.css"]
           },
           "configurations": {
             "production": {

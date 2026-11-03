@@ -2,31 +2,28 @@
 version: 1
 slug: "src-app-pages-home-home-ts"
 primary_target: "src/app/pages/home/home.ts"
-related_targets: ["src/app/pages/home/sections/why-choose.ts","src/app/pages/home/sections/news-events.ts"]
+related_targets: ["src/app/layout/site-header.ts","src/app/layout/site-footer.ts"]
 ---
 
 # Homepage
 
-Scope: BKB Global public homepage (`src/app/pages/home`). Visitor mode: Persuade.
+Scope: BKG Global School public homepage (`src/app/pages/home`, layout in `src/app/layout`). Visitor mode: Persuade.
 
-Audience: prospective parents in India comparing schools, mostly on phones; current parents passing through to recurring information. Action: book a visit (working form in the first viewport and again at the visit section). Belief to earn: academic strength. Avoid: childish, corporate, stiff. Proof: none supplied; facts are marked placeholders; photos are Indian-school stock placeholders.
+Audience: prospective parents around Sandur and Ballari district, often on phones; current parents for timings, fees and disclosures. Action: admission enquiry (working form in the hero card and again at admissions). Belief to earn: an established, professional school with academic strength rooted in Indian tradition. Proof: only the school's own facts and photos (PRODUCT.md).
 
 ## Direction contract
 
-THESIS: A lively, illustrated school homepage where hand-drawn lines and small animated illustrations carry parents through the school's journey, Woodleigh-style, grounded in real (stock for now) photos of Indian classrooms. Refuses the photo-hero-plus-three-cards template and the first, rejected two-ink textbook look.
+THESIS: A professional, photo-led homepage in the manner of Bishop Cotton School's site (client's chosen reference): campus photography, serif headings, navy and crest gold, and calm, confident motion. Refuses both the old WordPress slider-and-widgets page and the earlier playful illustrated version the client rejected as not professional.
 
-OWN-WORLD: Burgundy #7B1E3A and white as the school colours; deep wine #4A0E22 for footer and outlines; blush #F8E9EE and rose #E7B4C3 for panels and illustration fills; marigold #F2A93B only inside illustrations and tiny highlights. Bricolage Grotesque display, Figtree body. Illustrations: flat burgundy, rose and marigold shapes with 2.5px wine outlines and round caps. Photos in 28px-rounded frames.
+OWN-WORLD: Navy-deep #0b1838 and navy #13285e, crest gold #c9a24c, white and paper #f6f7fb grounds. Source Serif 4 headings (italic for emphasis), Figtree body. 6px controls, 12px cards, a short gold rule under every section title, gold caps inset on cards. No illustrations; only the school's own photos.
 
-STORY: Parents see happy, focused Indian students, read that learning here is serious, follow the journey from Pre-Primary to Class 12, see how teaching works and life beyond class, then book a visit.
+STORY: Parents see BKG students at work and the school's own tagline, enquire at once or read on: welcome, figures, the Chairman and the founder, academics by stage, BKG-SMILE, life and residential care, the Sandur campus, happenings, admission steps, and parents' information.
 
-FIRST VIEWPORT: Left: headline "Curious minds. Serious learning.", lede, horizontal visit form (stage, name, phone or email, Book a visit). A marigold scribble underlines "Serious learning." with a small pencil at its end (visible on phones too). Right: large rounded photo of students at work with illustrations animating around it (paper plane on a dotted loop, orbiting atom, stack of books with an apple, a turning marigold flower as the Indian-garden note). Under reduced motion the plane rests at the end of its loop.
+FIRST VIEWPORT: Navy utility bar (affiliation, phone, email, disclosure). White sticky header with the full logo and "Admissions 2026–27". Full-bleed science-lab photo under a navy gradient; left: serif "Where the learning begins" with "learning" in gold italic, lede, gold "Book a campus visit" and outline "Discover BKG"; right: white admission-enquiry card with a working form.
 
-FORM: User-pinned direction "Illustrated & lively, burgundy & white, Indian stock photos", replacing roll seed:33ceba9beb834f11. Signature interaction: a hand-drawn dotted path draws itself down the journey section as you scroll, and each stage's illustration comes alive when the path reaches it. Motion grammar: lines draw, illustrations idle gently; everything static under reduced motion.
+FORM: Client-pinned "Bishop Cotton style, remove illustrations" (2026-11-03), replacing the illustrated world and roll seed:33ceba9beb834f11. Signature motion: the hero photo settles from a slow zoom as the copy rises in; campus figures count up; sections fade up on scroll; the header condenses on scroll. All static under reduced motion.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
-## Reference content structure (added 2026-11-03)
-The school shared Indian heritage-school references (Doon, Mayo, Scindia, Welham Girls, Rishi Valley, Sanawar, Woodstock, Bishop Cotton). User chose to keep this visual world and adopt Doon's content structure: announcements ticker with parent/student login and fee payment, Why choose (four proof figures, placeholders until verified), Principal's message, Life at BKB in five pillars (Academics, Pastoral care, Activities & outdoors, Sports, Service), News & events with Achievements, affiliation logos, and a fraud-warning disclaimer naming official channels. Section order: ticker, masthead, hero, statement, why choose, journey, teaching, principal, life, news, visit, parents, footer.
-
 ## Open decisions
-City, board/curriculum (CBSE, ICSE, IB, Cambridge, state), class range, differentiators, real photos, logo, visit-booking backend.
+Enquiry backend; principal's name and message; board results; original high-resolution photos; rebuilding the other pages that still link to the old site.
