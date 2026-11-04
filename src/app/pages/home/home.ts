@@ -9,6 +9,9 @@ import { CampusSection } from './sections/campus-section';
 import { HappeningsSection } from './sections/happenings-section';
 import { LifeSection } from './sections/life-section';
 import { ParentsSection } from './sections/parents-section';
+import { QualityWheelSection } from './sections/quality-wheel-section';
+import { SmileSection } from './sections/smile-section';
+import { WhyBkgSection } from './sections/why-bkg-section';
 import { StageOption, VisitForm } from './visit-form';
 
 interface Stage extends StageOption {
@@ -36,19 +39,11 @@ const FIGURES = [
   { value: 24, suffix: '/7', unit: '', label: 'CCTV, RFID tracking and ambulance' },
 ];
 
-/* BKG-SMILE: the five fundamental principles of the school's curriculum. */
-const SMILE = [
-  { letter: 'S', title: 'Spiritual resilience', text: 'Yoga, meditation, Saraswati Vandana and the chanting of slokas bring calm and focus to the day.' },
-  { letter: 'M', title: 'Mental intelligence', text: 'Questioning, enquiry and independent thinking, with a scientific, solution-oriented outlook.' },
-  { letter: 'I', title: 'Infrastructure & facilities', text: 'Smart classrooms, science and English language labs, and a 4.5-acre playing area.' },
-  { letter: 'L', title: 'Laboratory-based teaching', text: 'Experiments, models, research and exploration: children learn by doing.' },
-  { letter: 'E', title: 'Emotional intelligence', text: 'Visual and performing arts, life skills and pastoral care for confident, happy children.' },
-];
-
 @Component({
   selector: 'app-home',
   imports: [
     SiteHeader, SiteFooter, VisitForm, RevealDirective, CountUpDirective, Particles,
+    WhyBkgSection, SmileSection, QualityWheelSection,
     LifeSection, CampusSection, HappeningsSection, AdmissionsSection, ParentsSection,
   ],
   templateUrl: './home.html',
@@ -57,5 +52,4 @@ const SMILE = [
 export class HomePage {
   protected readonly stages = STAGES;
   protected readonly figures = FIGURES;
-  protected readonly smile = SMILE;
 }

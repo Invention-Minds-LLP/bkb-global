@@ -66,6 +66,15 @@
         ],
         "createdAt": "2026-11-01T06:28:47.179Z",
         "reason": "Claude: rejected decision-round sketch from the superseded direction; not shipped"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/app/pages/home/sections/smile-section.css"
+        ],
+        "createdAt": "2026-11-04T06:58:07.052Z",
+        "reason": "Claude: decorative aria-hidden S-M-I-L-E letters rendered as an animated crest-gold metal shimmer; part of the SMILE animation the user asked to make more attractive"
       }
     ]
   }

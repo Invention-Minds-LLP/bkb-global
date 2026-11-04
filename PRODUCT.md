@@ -13,6 +13,7 @@ Angular 22 (user's choice), static build deployed on Netlify (`netlify.toml`). R
 ## Users
 
 - **Prospective parents (primary):** families comparing schools in and around Sandur and Ballari district, often on a phone, deciding whether to visit or apply. Their job is to trust the school enough to book a visit or start an application.
+- **Many of them are senior executives** (CEOs, COOs, MDs of the region's companies; client-confirmed 2026-11-04). They judge a school the way they judge an organisation: leadership, decision-making, accountability, quality systems and future readiness. Present BKG's teaching in those terms, using the school's own words, and give **Mental intelligence** (the "M" of BKG-SMILE) particular prominence.
 - **Current parents and students:** returning visitors who need timings, fees, happenings, the blog and mandatory disclosures quickly.
 
 ## Product Purpose

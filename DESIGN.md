@@ -426,7 +426,9 @@ One curve: `cubic-bezier(0.22, 1, 0.36, 1)`. State changes run 160–300ms; reve
 - **Count up:** figures count from zero over 1400ms (ease-out quart) when 60% visible; the real value is always in the markup.
 - **Header condense:** height, logo and shadow transition over 300ms.
 - **Floating learning icons** (`app-particles`, client request 2026-11-03): thin outline icons (open book, light bulb, pencil, graduation cap, globe, flask, star), 22–42px, 1.6px stroke, drift slowly upward with a gentle turn and a soft opacity pulse, behind the content of a `.has-particles` section. Crest gold on navy grounds (opacity 0.45–0.75), navy (0.3) or deep gold (0.45) on white grounds. About 1–1.8 icons per 100,000 px², capped at 28 per section. Paused off screen.
-- All of it is static under `prefers-reduced-motion: reduce` (the icons render as one still frame).
+- **SMILE spotlight** (`app-smile-section`): giant serif S-M-I-L-E letters with a crest-gold metallic shimmer (sanctioned gradient text, decorative and aria-hidden) on a gold rail that fills to the spotlit letter; the spotlight tours the five principle cards every 3.2s while on screen and follows hover or focus.
+- **Quality wheel** (`app-quality-wheel-section`): the crest at the hub, a slowly turning dashed gold ring (80s), eight corner buttons (tablist) and a gold beam that swings 900ms to the active corner; the detail panel slides in. Tours every 4.2s until the visitor picks a corner. Below 680px it becomes a stack of cards.
+- All of it is static under `prefers-reduced-motion: reduce` (the icons render as one still frame; spotlight and wheel tours are off).
 
 ## Do's and Don'ts
 

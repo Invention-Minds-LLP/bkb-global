@@ -154,6 +154,12 @@ a {
   font-size: 18px;
   color: var(--ink-soft);
 }
+.section-title.light {
+  color: var(--white);
+}
+.section-lede.light {
+  color: var(--on-navy-soft);
+}
 .section-lede.center {
   margin-left: auto;
   margin-right: auto;

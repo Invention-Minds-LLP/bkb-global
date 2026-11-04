@@ -1,0 +1,69 @@
+<section class="quality" id="quality" aria-labelledby="quality-title">
+  <div class="wrap">
+    <h2 class="section-title center" id="quality-title" appReveal revealFrom="down">Quality education, from every corner</h2>
+    <p class="section-lede center" appReveal="120">Eight things every parent should expect from a great school, and how BKG
+      delivers each one.</p>
+
+    <div class="stage">
+      <!-- The wheel: crest at the centre, eight corners around it -->
+      <div class="wheel" appReveal revealFrom="zoom">
+        <svg class="orbit" viewBox="0 0 400 400" aria-hidden="true">
+          <circle class="ring-outer" cx="200" cy="200" r="190" />
+          <circle class="ring" cx="200" cy="200" r="150" />
+        </svg>
+        <div class="beam" aria-hidden="true" [style.transform]="'rotate(' + (active() * step - 90) + 'deg)'"></div>
+
+        <div class="hub" aria-hidden="true">
+          <img src="images/bkg/logo.png" width="853" height="462" alt="" />
+        </div>
+
+        <div class="nodes" role="tablist" aria-label="Areas of quality">
+          @for (c of corners; track c.title; let i = $index) {
+            <button type="button" class="node" role="tab" [id]="'corner-tab-' + i"
+              [attr.aria-selected]="i === active()" [attr.aria-controls]="'corner-panel'"
+              [class.on]="i === active()" [style.--a]="i * step + 'deg'" (click)="pick(i)">
+              <span class="dot">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path [attr.d]="c.icon" /></svg>
+              </span>
+              <span class="label">{{ c.title }}</span>
+            </button>
+          }
+        </div>
+      </div>
+
+      <!-- Detail for the active corner -->
+      @let c = corners[active()];
+      <article class="panel" id="corner-panel" role="tabpanel" [attr.aria-labelledby]="'corner-tab-' + active()"
+        appReveal="150" revealFrom="right">
+        @for (k of [active()]; track k) {
+          <div class="panel-inner">
+            <p class="count">{{ active() + 1 }} <span>/ {{ corners.length }}</span></p>
+            <h3>{{ c.title }}</h3>
+            <p class="lead">{{ c.lead }}</p>
+            <ul>
+              @for (pt of c.points; track pt) {
+                <li>
+                  <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  {{ pt }}
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </article>
+    </div>
+
+    <!-- Small screens: every corner as a card -->
+    <ul class="cards">
+      @for (c of corners; track c.title; let i = $index) {
+        <li appReveal="{{ (i % 2) * 120 }}" [revealFrom]="i % 2 === 0 ? 'left' : 'right'">
+          <span class="dot">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path [attr.d]="c.icon" /></svg>
+          </span>
+          <h3>{{ c.title }}</h3>
+          <p>{{ c.lead }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,171 @@
+:host {
+  display: block;
+}
+
+.smile {
+  padding: var(--space-6) var(--gutter);
+  background:
+    radial-gradient(ellipse at 50% 30%, rgb(201 162 76 / 0.14), transparent 60%),
+    var(--navy-deep);
+}
+
+/* The word S M I L E, joined by a gold rail that fills to the spotlit letter */
+.word {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: var(--space-5);
+}
+.rail {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 6px;
+  height: 2px;
+  background: rgb(255 255 255 / 0.14);
+}
+.rail-fill {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold));
+  box-shadow: 0 0 12px rgb(201 162 76 / 0.6);
+  transition: width 900ms var(--ease-out);
+}
+.big {
+  position: relative;
+  justify-self: center;
+  padding-bottom: 22px;
+  font-family: var(--font-serif);
+  font-size: clamp(72px, 10vw, 150px);
+  font-weight: 600;
+  line-height: 1;
+  background: linear-gradient(110deg, #a27f32 20%, #f1d991 45%, #c9a24c 55%, #a27f32 80%);
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.45;
+  transform: translateY(8px) scale(0.92);
+  transition: opacity 600ms var(--ease-out), transform 700ms var(--ease-out);
+  animation: shimmer 6s linear infinite;
+  animation-delay: calc(var(--i) * 0.4s);
+}
+.big::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--navy-deep);
+  border: 2px solid rgb(255 255 255 / 0.3);
+  transform: translateX(-50%);
+  transition: background 400ms var(--ease-out), border-color 400ms var(--ease-out), box-shadow 400ms var(--ease-out);
+}
+.big.on {
+  opacity: 1;
+  transform: translateY(0) scale(1.06);
+  filter: drop-shadow(0 8px 28px rgb(201 162 76 / 0.35));
+}
+.big.on::after {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 6px rgb(201 162 76 / 0.2);
+}
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  45%,
+  100% {
+    background-position: -150% 0;
+  }
+}
+
+/* Five principle cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.grid li {
+  position: relative;
+  padding: 26px 22px 24px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: var(--radius-l);
+  background: #101f47;
+  cursor: default;
+  outline: none;
+  transition: background 500ms var(--ease-out), border-color 500ms var(--ease-out), transform 500ms var(--ease-out), box-shadow 500ms var(--ease-out);
+}
+.grid li.on {
+  background: linear-gradient(180deg, #2a3150, #121f45);
+  border-color: rgb(201 162 76 / 0.7);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgb(0 0 0 / 0.3);
+}
+.grid li:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.tag {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(201 162 76 / 0.6);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold);
+  transition: background 500ms var(--ease-out), color 500ms var(--ease-out);
+}
+.grid li.on .tag {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+.grid h3 {
+  margin-top: var(--space-2);
+  font-size: 20px;
+  color: var(--white);
+}
+.grid p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--on-navy-soft);
+}
+.grid .detail {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--gold);
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid li:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .big {
+    animation: none;
+    background-position: 30% 0;
+  }
+}

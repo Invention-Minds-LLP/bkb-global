@@ -40,28 +40,7 @@
     </div>
   </div>
 
-  <!-- Welcome -->
-  <section class="welcome has-particles" id="about" aria-labelledby="welcome-title">
-    <app-particles rgb="19, 40, 94" [density]="1" [opacity]="0.3" />
-    <div class="wrap welcome-grid">
-      <div class="welcome-copy" appReveal revealFrom="left">
-        <h2 class="section-title" id="welcome-title">Welcome to BKG Global School</h2>
-        <p class="section-lede">BKG Global School aims to provide a stimulating learning environment with truly
-          international standards within the formal CBSE curriculum. We believe school life should be valued for itself,
-          and as a preparation for adulthood.</p>
-        <p class="body">Our students learn from experienced, dedicated and caring faculty who understand learners and guide
-          them to excel. Teaching is child-centred and imaginative, and the curriculum blends scholastic and co-scholastic
-          learning, so children are ready for the 21st century.</p>
-        <blockquote class="pull">“We believe in reaching the mind through the heart.”</blockquote>
-      </div>
-      <div class="welcome-media" appReveal="150" revealFrom="right">
-        <img class="m1" src="images/bkg/computer-lab.jpg" width="1024" height="683" loading="lazy"
-          alt="BKG students with headsets working at computers in the computer lab" />
-        <img class="m2" src="images/bkg/art-painting.jpg" width="1024" height="684" loading="lazy"
-          alt="A young BKG student painting a large multicoloured umbrella in the art room" />
-      </div>
-    </div>
-  </section>
+  <app-why-bkg-section />
 
   <!-- Figures -->
   <section class="figures has-particles" aria-label="BKG at a glance">
@@ -128,23 +107,8 @@
     </div>
   </section>
 
-  <!-- SMILE -->
-  <section class="smile has-particles" aria-labelledby="smile-title">
-    <app-particles [density]="1.3" [opacity]="0.65" />
-    <div class="wrap">
-      <h2 class="section-title center light" id="smile-title" appReveal revealFrom="zoom">The BKG-SMILE way of education</h2>
-      <p class="section-lede center light" appReveal="120">Five fundamental principles shape how every child learns at BKG.</p>
-      <ul class="smile-grid">
-        @for (p of smile; track p.letter; let i = $index) {
-          <li appReveal="{{ i * 110 }}" [revealFrom]="i % 2 === 0 ? 'up' : 'down'">
-            <span class="letter" aria-hidden="true">{{ p.letter }}</span>
-            <h3>{{ p.title }}</h3>
-            <p>{{ p.text }}</p>
-          </li>
-        }
-      </ul>
-    </div>
-  </section>
+  <app-smile-section />
+  <app-quality-wheel-section />
 
   <app-life-section />
   <app-campus-section />
